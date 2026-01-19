@@ -1,0 +1,320 @@
+/* ========== MOBILE FIXES ========== */
+
+/* Ensure hero content doesn't overflow */
+.hero {
+    overflow-x: hidden;
+}
+
+.hero-content {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.hero h1 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Word wrappers responsive */
+.word-wrapper {
+    max-width: 100%;
+    display: inline-block !important;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+    /* Fix hero section spacing */
+    .hero {
+        padding: 6rem 5% 4rem 5% !important;
+        min-height: auto !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-wrapper {
+        flex-direction: column !important;
+        gap: 2rem !important;
+        padding: 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center;
+    }
+
+    /* CRITICAL: Make avatar visible - override ALL JS animations */
+    #hero-avatar,
+    .hero-avatar {
+        order: -1 !important;
+        margin: 0 auto 1.5rem !important;
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        flex-shrink: 0 !important;
+    }
+
+    #hero-avatar img,
+    .hero-avatar img,
+    .hero-avatar-img,
+    img.hero-avatar-img {
+        width: 140px !important;
+        height: 140px !important;
+        display: block !important;
+        margin: 0 auto !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+        filter: none !important;
+        border: 3px solid var(--accent-cyan) !important;
+        border-radius: 50% !important;
+        object-fit: cover !important;
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.4) !important;
+    }
+
+    .hero-content {
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+    }
+
+    .hero-tag {
+        margin: 0 auto 1.5rem !important;
+        font-size: 0.75rem !important;
+        padding: 0.4rem 0.8rem !important;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 1rem !important;
+        text-align: center !important;
+    }
+
+    .hero-description {
+        text-align: center !important;
+        max-width: 100% !important;
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        padding: 0 0.5rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .hero-cta {
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 1rem !important;
+        width: 100% !important;
+    }
+
+    .hero-cta .btn {
+        flex: 1 1 auto !important;
+        min-width: 140px !important;
+        max-width: 200px !important;
+        justify-content: center !important;
+    }
+
+    .stats-bar {
+        justify-content: center !important;
+        gap: 2rem !important;
+        flex-wrap: wrap !important;
+        margin-top: 3rem !important;
+    }
+
+    .stat {
+        flex: 0 1 auto !important;
+        min-width: 80px !important;
+        text-align: center !important;
+    }
+
+    /* Hide particles on mobile for better performance */
+    .hero-particles {
+        display: none !important;
+    }
+
+    /* Hide orbs on mobile to prevent horizontal scroll */
+    .orb {
+        display: none !important;
+    }
+
+    /* Fix navigation */
+    nav {
+        padding: 1rem 5% !important;
+    }
+
+    /* Sections spacing */
+    section {
+        padding: 3rem 5% !important;
+    }
+
+    /* Skills section */
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Projects section */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    /* Contact section - unified card responsive */
+    .contact-wrapper-new {
+        padding: 1rem 5% !important;
+    }
+
+    .contact-card-unified {
+        max-width: 100% !important;
+        padding: 2.5rem 1.5rem !important;
+    }
+
+    .card-contact-list {
+        gap: 0.5rem !important;
+    }
+
+    .card-contact-item {
+        padding: 0.6rem 0.8rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    .card-contact-icon {
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    /* Scroll to top button mobile */
+    .scroll-to-top {
+        bottom: 1.5rem !important;
+        right: 1.5rem !important;
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    .scroll-to-top svg,
+    .scroll-to-top i {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 480px) {
+    .hero {
+        padding: 5rem 4% 3rem 4% !important;
+    }
+
+    .hero-wrapper {
+        gap: 1.5rem !important;
+    }
+
+    #hero-avatar img,
+    .hero-avatar img,
+    .hero-avatar-img,
+    img.hero-avatar-img {
+        width: 110px !important;
+        height: 110px !important;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem !important;
+        letter-spacing: -0.3px !important;
+    }
+
+    .hero-description {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        padding: 0 !important;
+    }
+
+    .hero-cta .btn {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0.8rem 1.5rem !important;
+    }
+
+    .stats-bar {
+        gap: 1.5rem !important;
+    }
+
+    .stat-number {
+        font-size: 1.8rem !important;
+    }
+
+    .stat-label {
+        font-size: 0.75rem !important;
+    }
+
+    /* Contact card adjustments for small screens */
+    .contact-card-unified {
+        padding: 2rem 1.2rem !important;
+    }
+
+    .card-avatar {
+        width: 70px !important;
+        height: 70px !important;
+    }
+
+    .card-name {
+        font-size: 1.3rem !important;
+    }
+
+    .card-description {
+        font-size: 0.85rem !important;
+    }
+
+    .card-contact-item {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 0.6rem !important;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+    .hero {
+        padding: 4.5rem 3% 2.5rem 3% !important;
+    }
+
+    .hero h1 {
+        font-size: 1.3rem !important;
+    }
+
+    #hero-avatar img,
+    .hero-avatar img,
+    .hero-avatar-img,
+    img.hero-avatar-img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+
+    .hero-description {
+        font-size: 0.9rem !important;
+    }
+
+    .stat-number {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto !important;
+        padding: 2rem 5% !important;
+    }
+
+    .hero-avatar,
+    #hero-avatar {
+        display: none !important;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem !important;
+    }
+
+    .stats-bar {
+        margin-top: 2rem !important;
+    }
+}

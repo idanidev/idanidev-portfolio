@@ -1,0 +1,156 @@
+/* ========== HERO EFFECTS ========== */
+
+/* Word wrappers for animation */
+.word-wrapper {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.word {
+    display: inline-block;
+    transform-origin: bottom;
+}
+
+/* Enhanced gradient effect */
+.hero .gradient {
+    background: linear-gradient(
+        90deg,
+        #00d4ff 0%,
+        #4a9eff 25%,
+        #ff6b4a 50%,
+        #4a9eff 75%,
+        #00d4ff 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+/* Glitch effect optimization */
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        #00d4ff 0%,
+        #4a9eff 25%,
+        #ff6b4a 50%,
+        #4a9eff 75%,
+        #00d4ff 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glitch::before {
+    animation: glitch-1 3s infinite linear alternate-reverse;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    opacity: 0.7;
+}
+
+.glitch::after {
+    animation: glitch-2 4s infinite linear alternate-reverse;
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+    opacity: 0.7;
+}
+
+@keyframes glitch-1 {
+    0%, 90%, 100% {
+        transform: translate(0);
+        opacity: 0;
+    }
+    92% {
+        transform: translate(-1px, 1px);
+        opacity: 0.7;
+    }
+    94% {
+        transform: translate(1px, -1px);
+        opacity: 0.7;
+    }
+    96% {
+        transform: translate(-1px, -1px);
+        opacity: 0.7;
+    }
+    98% {
+        transform: translate(1px, 1px);
+        opacity: 0.7;
+    }
+}
+
+@keyframes glitch-2 {
+    0%, 90%, 100% {
+        transform: translate(0);
+        opacity: 0;
+    }
+    91% {
+        transform: translate(1px, -1px);
+        opacity: 0.7;
+    }
+    93% {
+        transform: translate(-1px, 1px);
+        opacity: 0.7;
+    }
+    95% {
+        transform: translate(1px, 1px);
+        opacity: 0.7;
+    }
+    97% {
+        transform: translate(-1px, -1px);
+        opacity: 0.7;
+    }
+}
+
+/* Hero particles container */
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Glow effect on gradient text */
+.hero .gradient {
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.4));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .word-wrapper {
+        display: inline-block;
+    }
+
+    .glitch::before,
+    .glitch::after {
+        display: none;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .word {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .glitch::before,
+    .glitch::after {
+        animation: none !important;
+    }
+
+    .hero-particles {
+        display: none;
+    }
+}

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Daniel Benito Díaz - Full Stack Developer especializado en Angular, Spring Boot y Python. Portfolio profesional con proyectos y experiencia.">
+    <meta name="keywords" content="Full Stack Developer, Angular, Spring Boot, Python, Portfolio, Web Development">
+    <meta name="author" content="Daniel Benito Díaz">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Daniel Benito Díaz | Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer especializado en Angular, Spring Boot y Python">
+    <meta property="og:type" content="website">
+
+    <title>Daniel Benito Díaz | Full Stack Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="css/hero-effects.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile-fix.css">
+
+    <style>
+        /* Hide cursor elements */
+        .cursor,
+        .cursor-dot {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="noise"></div>
+    <div class="grid-bg"></div>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">&lt; iDaniDev /&gt;</div>
+        <ul class="nav-links">
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="hero-wrapper">
+            <!-- Avatar/Logo Image -->
+            <div class="hero-avatar" id="hero-avatar">
+                <img src="images/idanidev-avatar.jpg" alt="iDaniDev Logo" class="hero-avatar-img">
+            </div>
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="dot"></span>
+                    Disponible para nuevos proyectos
+                </div>
+                <h1>
+                    Hola, soy<br>
+                    <span class="gradient glitch" data-text="Daniel Benito">Daniel Benito</span>
+                </h1>
+                <p class="hero-description">
+                    Full Stack & Apple Developer especializado en <strong>iOS (Swift)</strong>,
+                    <strong>Angular</strong>, <strong>Spring Boot</strong> y
+                    <strong>Python</strong>.
+                    Transformo ideas en experiencias digitales excepcionales con código limpio y arquitecturas
+                    escalables.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary magnetic">
+                        <span>Ver Proyectos</span>
+                        <i data-lucide="arrow-right" style="width: 20px; height: 20px;"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary magnetic">
+                        <span>Contactar</span>
+                        <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
+                    </a>
+                </div>
+                <div class="stats-bar">
+                    <div class="stat">
+                        <div class="stat-number">4+</div>
+                        <div class="stat-label">Años de experiencia</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">11+</div>
+                        <div class="stat-label">Proyectos en GitHub</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Empresas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header reveal">
+            <div class="section-tag">// Mis habilidades</div>
+            <h2 class="section-title">Stack Tecnológico</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i data-lucide="layout-dashboard" style="width: 32px; height: 32px;"></i>
+                </div>
+                <h3>Frontend</h3>
+                <p>Creación de interfaces modernas, responsivas y con animaciones fluidas que mejoran la experiencia de
+                    usuario.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">PrimeNG</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i data-lucide="server" style="width: 32px; height: 32px;"></i>
+                </div>
+                <h3>Backend</h3>
+                <p>Desarrollo de APIs robustas y microservicios escalables con las mejores prácticas de la industria.
+                </p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">REST APIs</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i data-lucide="database" style="width: 32px; height: 32px;"></i>
+                </div>
+                <h3>Bases de Datos</h3>
+                <p>Diseño y optimización de esquemas de base de datos para aplicaciones de alto rendimiento.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Oracle</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i data-lucide="cloud" style="width: 32px; height: 32px;"></i>
+                </div>
+                <h3>Cloud & Tools</h3>
+                <p>Experiencia con plataformas cloud y herramientas de desarrollo modernas para CI/CD.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Salesforce</span>
+                    <span class="skill-tag">Vlocity</span>
+                    <span class="skill-tag">OmniStudio</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i data-lucide="smartphone" style="width: 32px; height: 32px;"></i>
+                </div>
+                <h3>iOS / Apple Developer</h3>
+                <p>Desarrollo de apps nativas para el ecosistema Apple con publicación en App Store.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Swift</span>
+                    <span class="skill-tag">SwiftUI</span>
+                    <span class="skill-tag">HealthKit</span>
+                    <span class="skill-tag">WatchOS</span>
+                    <span class="skill-tag">App Store</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header reveal">
+            <div class="section-tag">// Proyectos destacados</div>
+            <h2 class="section-title">Mi Trabajo Reciente</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Clarity App -->
+            <div class="project-card">
+                <div class="project-visual">
+                    <div class="project-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dot"></div>
+                            <div class="mockup-dot"></div>
+                            <div class="mockup-dot"></div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                        </div>
+                    </div>
+                    <div class="project-badge"
+                        style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #00C853, #69F0AE); color: #000; padding: 4px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 600;">
+                        🚀 En Desarrollo</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">iOS App Nativa</div>
+                    <h3>Clarity</h3>
+                    <p>App iOS nativa de bienestar digital que ayuda a gestionar el tiempo de uso del móvil con
+                        recordatorios inteligentes y estadísticas detalladas. Actualmente desplegada en App Store.</p>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>SwiftUI</span>
+                        <span>iOS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/idanidev/Clarity" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            Ver código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rental Manager -->
+            <div class="project-card">
+                <div class="project-visual">
+                    <div class="project-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dot"></div>
+                            <div class="mockup-dot"></div>
+                            <div class="mockup-dot"></div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">Full Stack App</div>
+                    <h3>Rental Manager</h3>
+                    <p>Sistema completo de gestión de alquileres con panel de administración, seguimiento de pagos y
+                        gestión de inquilinos.</p>
+                    <div class="project-tech">
+                        <span>Svelte</span>
+                        <span>SvelteKit</span>
+                        <span>Database</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/idanidev/rental-manager" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            Ver código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All1Fit - App Store -->
+            <div class="project-card">
+                <div class="project-visual" style="position: relative; overflow: hidden;">
+                    <img src="images/all1fit-cover.jpg" alt="All1Fit Cover"
+                        style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                    <div
+                        style="position: absolute; bottom: 15px; left: 15px; width: 60px; height: 60px; background: rgba(0,0,0,0.7); padding: 5px; border-radius: 12px; backdrop-filter: blur(5px); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 2;">
+                        <img src="images/all1fit-logo.jpg" alt="Logo" style="width: 100%; border-radius: 8px;">
+                    </div>
+                    <div class="project-badge"
+                        style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #007AFF, #5856D6); color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 600;">
+                        App Store</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">iOS App - App Store</div>
+                    <h3>All1Fit</h3>
+                    <p>App de fitness completa publicada en App Store. Incluye tracking de RM, entrenamientos híbridos,
+                        temporizador Tabata con Live Activities y Apple Watch companion app.</p>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>SwiftUI</span>
+                        <span>HealthKit</span>
+                        <span>WatchOS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/idanidev/All1Fit_iOS" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            Ver código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- iOS Focus Reminder -->
+            <div class="project-card">
+                <div class="project-visual">
+                    <div class="project-mockup">
+                        <div class="mockup-header">
+                            <div class="mockup-dot"></div>
+                            <div class="mockup-dot"></div>
+                            <div class="mockup-dot"></div>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                            <div class="mockup-line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">iOS App</div>
+                    <h3>iOS Focus Reminder</h3>
+                    <p>Aplicación nativa para iOS que ayuda a mantener la concentración mediante recordatorios
+                        inteligentes y técnicas de productividad.</p>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>SwiftUI</span>
+                        <span>iOS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/idanidev/IOsFocusReminder" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            Ver código
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-header reveal">
+            <div class="section-tag">// Trayectoria profesional</div>
+            <h2 class="section-title">Experiencia Laboral</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Mayo 2023 - Presente</div>
+                    <h3>Full Stack Developer</h3>
+                    <div class="timeline-company">Naviera Armas</div>
+                    <ul>
+                        <li>Migración de Angular v10 a v16 con creación de librerías propias</li>
+                        <li>Desarrollo de microservicio de parcelas de puertos</li>
+                        <li>Implementación de arquitectura modular y escalable</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Junio 2022 - Mayo 2023</div>
+                    <h3>Full Stack Developer</h3>
+                    <div class="timeline-company">Minsait</div>
+                    <ul>
+                        <li>Desarrollo con Angular, PrimeNG y Spring Boot</li>
+                        <li>Gestión de bases de datos con SQL Developer y Oracle</li>
+                        <li>Implementación de interfaces responsive con TypeScript</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Noviembre 2021 - Mayo 2022</div>
+                    <h3>Salesforce Developer</h3>
+                    <div class="timeline-company">NTT Data</div>
+                    <ul>
+                        <li>Desarrollo en plataforma Salesforce</li>
+                        <li>Implementación de soluciones con Vlocity y OmniStudio</li>
+                        <li>Configuración de flujos de trabajo automatizados</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Marzo 2021 - Septiembre 2021</div>
+                    <h3>Python Developer</h3>
+                    <div class="timeline-company">Octupus Technologies</div>
+                    <ul>
+                        <li>Desarrollo de módulos en Odoo</li>
+                        <li>Automatización de procesos con Python</li>
+                        <li>Integración de sistemas empresariales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header reveal">
+            <div class="section-tag">Contacto</div>
+            <h2>¿Tienes un proyecto en mente?</h2>
+        </div>
+        <div class="contact-wrapper-new reveal">
+            <div class="contact-card-unified">
+                <img src="images/personal-photo.jpg" alt="Daniel Benito" class="card-avatar">
+                <div class="card-name">Daniel Benito</div>
+                <div class="card-title">Full Stack Developer</div>
+                <div class="card-divider"></div>
+                <p class="card-description">
+                    Estoy disponible para proyectos freelance y oportunidades laborales. ¡Hablemos!
+                </p>
+
+                <!-- Contact Details -->
+                <div class="card-contact-list">
+                    <a href="mailto:idanibenito2@gmail.com" class="card-contact-item">
+                        <i data-lucide="mail" class="card-contact-icon"></i>
+                        <span>idanibenito2@gmail.com</span>
+                    </a>
+                    <a href="tel:+34601185393" class="card-contact-item">
+                        <i data-lucide="phone" class="card-contact-icon"></i>
+                        <span>+34 601 185 393</span>
+                    </a>
+                    <a href="https://linkedin.com/in/iDanielBenito" target="_blank" rel="noopener noreferrer" class="card-contact-item">
+                        <i data-lucide="linkedin" class="card-contact-icon"></i>
+                        <span>/in/iDanielBenito</span>
+                    </a>
+                    <a href="https://github.com/idanidev" target="_blank" rel="noopener noreferrer" class="card-contact-item">
+                        <i data-lucide="github" class="card-contact-icon"></i>
+                        <span>@idanidev</span>
+                    </a>
+                </div>
+
+                <div class="card-divider"></div>
+
+                <!-- Social Links -->
+                <div class="card-social">
+                        <a href="https://github.com/idanidev" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/iDanielBenito" target="_blank" rel="noopener noreferrer"
+                            class="social-link" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="mailto:idanibenito2@gmail.com" class="social-link" aria-label="Email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Volver arriba">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Daniel Benito Díaz. Hecho con 💜 y mucho código.</p>
+        <div class="footer-links">
+            <a href="https://github.com/idanidev" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/iDanielBenito" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:idanibenito2@gmail.com">Email</a>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- AnimeJS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+        integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Custom Scripts - Optimized -->
+    <script src="js/animations-optimized.js"></script>
+    <script src="js/hero-effects.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/scroll-to-top.js"></script>
+    <script src="js/app-optimized.js"></script>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+
+        // CRITICAL: Force avatar visibility on mobile
+        window.addEventListener('DOMContentLoaded', function() {
+            const avatar = document.querySelector('#hero-avatar');
+            const avatarImg = document.querySelector('#hero-avatar img');
+
+            if (avatar && avatarImg) {
+                avatar.style.cssText = 'display: block !important; opacity: 1 !important; visibility: visible !important;';
+                avatarImg.style.cssText = 'display: block !important; opacity: 1 !important; visibility: visible !important; width: 140px !important; height: 140px !important; border-radius: 50%; margin: 0 auto;';
+            }
+        });
+    </script>
+</body>
+
+</html>
