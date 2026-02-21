@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad — idanidev Apps</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        body {
+            background: var(--bg-primary, #0a0a0a);
+            color: var(--text-primary, #f0f0f0);
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .privacy-header {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 24px 0;
+            text-align: center;
+        }
+
+        .privacy-header a {
+            color: var(--accent, #6C63FF);
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .privacy-header a:hover { opacity: 1; }
+
+        .privacy-container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+
+        .privacy-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .privacy-meta {
+            color: rgba(255,255,255,0.4);
+            font-size: 0.85rem;
+            margin-bottom: 48px;
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: rgba(108,99,255,0.15);
+            border: 1px solid rgba(108,99,255,0.3);
+            color: #a89cff;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0 4px 8px 0;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            color: #fff;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        p, li {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.95rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li { margin-bottom: 6px; }
+
+        a { color: #a89cff; }
+
+        .contact-box {
+            margin-top: 48px;
+            background: rgba(108,99,255,0.08);
+            border: 1px solid rgba(108,99,255,0.2);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .contact-box h2 {
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
+        .footer-note {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.25);
+        }
+    </style>
+</head>
+<body>
+
+<header class="privacy-header">
+    <a href="index.html">← idanidev portfolio</a>
+</header>
+
+<div class="privacy-container">
+
+    <h1 class="privacy-title">Política de Privacidad</h1>
+    <p class="privacy-meta">Última actualización: febrero 2026</p>
+
+    <p>Esta política de privacidad aplica a las siguientes aplicaciones desarrolladas por <strong>Daniel Benito (idanidev)</strong>:</p>
+    <div>
+        <span class="app-badge">📱 RentalMngr</span>
+        <span class="app-badge">🧠 RepoMind</span>
+    </div>
+
+    <h2>1. Información que recopilamos</h2>
+    <p>Las apps solo recopilan la información que tú proporcionas de forma activa:</p>
+    <ul>
+        <li><strong>RentalMngr:</strong> datos de propiedades, habitaciones, inquilinos y finanzas que introduces manualmente; dirección de correo electrónico para la cuenta.</li>
+        <li><strong>RepoMind:</strong> token de acceso personal de GitHub (PAT) para conectar tu cuenta; tareas e información de tableros Kanban que creas tú.</li>
+    </ul>
+    <p>No recopilamos datos de uso, analíticas de terceros, ni información sobre tu dispositivo más allá de lo necesario para el funcionamiento de la app.</p>
+
+    <h2>2. Cómo usamos tu información</h2>
+    <p>Los datos que introduces se utilizan exclusivamente para:</p>
+    <ul>
+        <li>Mostrar y gestionar la información dentro de la propia app.</li>
+        <li>Sincronizar tus datos entre dispositivos (cuando aplica).</li>
+        <li>Generar documentos como contratos en PDF (RentalMngr).</li>
+        <li>Conectar con la API de GitHub para sincronizar repositorios (RepoMind).</li>
+    </ul>
+    <p>No usamos tus datos para publicidad, perfiles de usuario ni los compartimos con terceros con fines comerciales.</p>
+
+    <h2>3. Almacenamiento de datos</h2>
+    <ul>
+        <li><strong>RentalMngr:</strong> los datos se almacenan en <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a>, un servicio de base de datos en la nube con cifrado en tránsito y en reposo. Solo tú tienes acceso a tus datos mediante tu cuenta.</li>
+        <li><strong>RepoMind:</strong> las tareas y tableros Kanban se almacenan localmente en tu dispositivo con SwiftData. El token de GitHub se guarda de forma segura en el Keychain del sistema operativo. Opcionalmente se sincroniza vía iCloud si lo tienes activado.</li>
+    </ul>
+
+    <h2>4. Servicios de terceros</h2>
+    <p>Las apps pueden integrar los siguientes servicios de terceros, sujetos a sus propias políticas de privacidad:</p>
+    <ul>
+        <li><a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase</a> — base de datos y autenticación (RentalMngr)</li>
+        <li><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub API</a> — sincronización de repositorios (RepoMind)</li>
+        <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">iCloud de Apple</a> — sincronización opcional (RepoMind)</li>
+    </ul>
+    <p>No utilizamos SDKs de análisis (Firebase Analytics, Mixpanel, etc.) ni redes publicitarias.</p>
+
+    <h2>5. Permisos del dispositivo</h2>
+    <ul>
+        <li><strong>Galería de fotos</strong> (RentalMngr): para añadir fotos a propiedades y habitaciones. Solo se accede cuando lo solicitas.</li>
+        <li><strong>Micrófono y reconocimiento de voz</strong> (RepoMind): para la función de añadir tareas por voz. El audio se procesa localmente por el framework Speech de Apple; no se envía a servidores externos.</li>
+        <li><strong>Notificaciones</strong>: para recordatorios opcionales. Puedes desactivarlas en cualquier momento desde Ajustes del sistema.</li>
+    </ul>
+
+    <h2>6. Menores de edad</h2>
+    <p>Estas aplicaciones no están dirigidas a menores de 13 años. No recopilamos intencionadamente datos de menores. Si crees que un menor ha proporcionado información, contáctanos para eliminarla.</p>
+
+    <h2>7. Tus derechos</h2>
+    <p>Tienes derecho a:</p>
+    <ul>
+        <li>Acceder a los datos que has introducido en la app.</li>
+        <li>Eliminar tu cuenta y todos los datos asociados en cualquier momento desde la configuración de la app.</li>
+        <li>Exportar tus datos (donde la funcionalidad esté disponible).</li>
+    </ul>
+
+    <h2>8. Cambios en esta política</h2>
+    <p>Si realizamos cambios significativos en esta política, lo comunicaremos mediante una actualización de la app o un aviso visible en esta página. La fecha de "última actualización" en la parte superior siempre refleja la versión vigente.</p>
+
+    <div class="contact-box">
+        <h2>📬 Contacto</h2>
+        <p>¿Preguntas sobre privacidad o solicitudes de eliminación de datos?</p>
+        <p>
+            <strong>Daniel Benito</strong><br>
+            GitHub: <a href="https://github.com/idanidev" target="_blank" rel="noopener">@idanidev</a><br>
+            Portfolio: <a href="https://idanidev-portfolio.vercel.app" target="_blank" rel="noopener">idanidev-portfolio.vercel.app</a>
+        </p>
+    </div>
+
+    <p class="footer-note">© 2026 Daniel Benito (idanidev). Todos los derechos reservados.</p>
+
+</div>
+
+</body>
+</html>
