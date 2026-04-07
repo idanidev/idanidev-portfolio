@@ -5,20 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Daniel Benito Díaz - Full Stack Developer especializado en Angular, Spring Boot y Python. Portfolio profesional con proyectos y experiencia.">
-    <meta name="keywords" content="Full Stack Developer, Angular, Spring Boot, Python, Portfolio, Web Development">
-    <meta name="author" content="Daniel Benito Díaz">
+        content="Daniel Benito Diaz - Full Stack & Apple Developer. Portfolio profesional con proyectos iOS, Angular, Spring Boot y Python.">
+    <meta name="keywords"
+        content="Full Stack Developer, iOS Developer, Apple Developer, Swift, SwiftUI, Angular, Spring Boot, Python, Portfolio">
+    <meta name="author" content="Daniel Benito Diaz">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Daniel Benito Díaz | Full Stack Developer">
-    <meta property="og:description" content="Full Stack Developer especializado en Angular, Spring Boot y Python">
+    <meta property="og:title" content="Daniel Benito Diaz | Full Stack & Apple Developer">
+    <meta property="og:description"
+        content="Full Stack & Apple Developer especializado en iOS, Angular, Spring Boot y Python">
     <meta property="og:type" content="website">
 
-    <title>Daniel Benito Díaz | Full Stack Developer</title>
+    <title>Daniel Benito Diaz | Full Stack & Apple Developer</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>💻</text></svg>">
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>&#x1F4BB;</text></svg>">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,16 +40,19 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/mobile-fix.css">
 
-    <style>
-        /* Hide cursor elements */
-        .cursor,
-        .cursor-dot {
-            display: none !important;
-        }
-    </style>
 </head>
 
 <body>
+    <!-- Reusable SVG Icons -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="icon-github" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </symbol>
+    </svg>
+
     <!-- Background Effects -->
     <div class="noise"></div>
     <div class="grid-bg"></div>
@@ -55,11 +60,14 @@
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
 
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Navigation -->
     <nav>
         <div class="logo">&lt; iDaniDev /&gt;</div>
         <ul class="nav-links">
-            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#about">Sobre mi</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Proyectos</a></li>
             <li><a href="#experience">Experiencia</a></li>
@@ -70,7 +78,6 @@
     <!-- Hero Section -->
     <section class="hero" id="about">
         <div class="hero-wrapper">
-            <!-- Avatar/Logo Image -->
             <div class="hero-avatar" id="hero-avatar">
                 <img src="images/idanidev-avatar.jpg" alt="iDaniDev Logo" class="hero-avatar-img">
             </div>
@@ -84,11 +91,10 @@
                     <span class="gradient glitch" data-text="Daniel Benito">Daniel Benito</span>
                 </h1>
                 <p class="hero-description">
-                    Full Stack & Apple Developer especializado en <strong>iOS (Swift)</strong>,
-                    <strong>Angular</strong>, <strong>Spring Boot</strong> y
-                    <strong>Python</strong>.
-                    Transformo ideas en experiencias digitales excepcionales con código limpio y arquitecturas
-                    escalables.
+                    Full Stack & Apple Developer con apps publicadas en el <strong>App Store</strong>.
+                    Especializado en <strong>iOS (Swift/SwiftUI)</strong>,
+                    <strong>Angular</strong>, <strong>Spring Boot</strong> y <strong>Python</strong>.
+                    Creo productos digitales que la gente quiere usar.
                 </p>
                 <div class="hero-cta">
                     <a href="#projects" class="btn btn-primary magnetic">
@@ -103,18 +109,29 @@
                 <div class="stats-bar">
                     <div class="stat">
                         <div class="stat-number">4+</div>
-                        <div class="stat-label">Años de experiencia</div>
+                        <div class="stat-label">Anos experiencia</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">11+</div>
-                        <div class="stat-label">Proyectos en GitHub</div>
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Proyectos</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">5</div>
                         <div class="stat-label">Empresas</div>
                     </div>
+                    <div class="stat">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Apps en App Store</div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll</span>
         </div>
     </section>
 
@@ -122,75 +139,90 @@
     <section id="skills">
         <div class="section-header reveal">
             <div class="section-tag">// Mis habilidades</div>
-            <h2 class="section-title">Stack Tecnológico</h2>
+            <h2 class="section-title">Stack Tecnologico</h2>
         </div>
         <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">
-                    <i data-lucide="layout-dashboard" style="width: 32px; height: 32px;"></i>
-                </div>
-                <h3>Frontend</h3>
-                <p>Creación de interfaces modernas, responsivas y con animaciones fluidas que mejoran la experiencia de
-                    usuario.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Angular</span>
-                    <span class="skill-tag">TypeScript</span>
-                    <span class="skill-tag">PrimeNG</span>
-                    <span class="skill-tag">HTML5</span>
-                    <span class="skill-tag">CSS3</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">
-                    <i data-lucide="server" style="width: 32px; height: 32px;"></i>
-                </div>
-                <h3>Backend</h3>
-                <p>Desarrollo de APIs robustas y microservicios escalables con las mejores prácticas de la industria.
-                </p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Spring Boot</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">REST APIs</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">
-                    <i data-lucide="database" style="width: 32px; height: 32px;"></i>
-                </div>
-                <h3>Bases de Datos</h3>
-                <p>Diseño y optimización de esquemas de base de datos para aplicaciones de alto rendimiento.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Oracle</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">
-                    <i data-lucide="cloud" style="width: 32px; height: 32px;"></i>
-                </div>
-                <h3>Cloud & Tools</h3>
-                <p>Experiencia con plataformas cloud y herramientas de desarrollo modernas para CI/CD.</p>
-                <div class="skill-tags">
-                    <span class="skill-tag">Salesforce</span>
-                    <span class="skill-tag">Vlocity</span>
-                    <span class="skill-tag">OmniStudio</span>
-                    <span class="skill-tag">Git</span>
-                </div>
-            </div>
-            <div class="skill-card">
+            <div class="skill-card" data-accent="cyan">
                 <div class="skill-icon">
                     <i data-lucide="smartphone" style="width: 32px; height: 32px;"></i>
                 </div>
                 <h3>iOS / Apple Developer</h3>
-                <p>Desarrollo de apps nativas para el ecosistema Apple con publicación en App Store.</p>
+                <p>Apps nativas para el ecosistema Apple con publicacion en App Store y Apple Watch.</p>
                 <div class="skill-tags">
                     <span class="skill-tag">Swift</span>
                     <span class="skill-tag">SwiftUI</span>
                     <span class="skill-tag">HealthKit</span>
                     <span class="skill-tag">WatchOS</span>
-                    <span class="skill-tag">App Store</span>
+                    <span class="skill-tag">SwiftData</span>
+                    <span class="skill-tag">Live Activities</span>
+                </div>
+            </div>
+            <div class="skill-card" data-accent="blue">
+                <div class="skill-icon">
+                    <i data-lucide="layout-dashboard" style="width: 32px; height: 32px;"></i>
+                </div>
+                <h3>Frontend</h3>
+                <p>Interfaces modernas, responsivas y con animaciones fluidas que mejoran la experiencia de usuario.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">Svelte</span>
+                    <span class="skill-tag">PrimeNG</span>
+                    <span class="skill-tag">HTML5/CSS3</span>
+                </div>
+            </div>
+            <div class="skill-card" data-accent="orange">
+                <div class="skill-icon">
+                    <i data-lucide="server" style="width: 32px; height: 32px;"></i>
+                </div>
+                <h3>Backend</h3>
+                <p>APIs robustas y microservicios escalables con las mejores practicas de la industria.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Firebase</span>
+                </div>
+            </div>
+            <div class="skill-card" data-accent="cyan">
+                <div class="skill-icon">
+                    <i data-lucide="database" style="width: 32px; height: 32px;"></i>
+                </div>
+                <h3>Bases de Datos</h3>
+                <p>Diseno y optimizacion de esquemas para aplicaciones de alto rendimiento.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Oracle</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">SwiftData</span>
+                    <span class="skill-tag">Supabase</span>
+                </div>
+            </div>
+            <div class="skill-card" data-accent="blue">
+                <div class="skill-icon">
+                    <i data-lucide="cloud" style="width: 32px; height: 32px;"></i>
+                </div>
+                <h3>Cloud & DevOps</h3>
+                <p>Plataformas cloud, CI/CD y herramientas de desarrollo modernas.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Salesforce</span>
+                    <span class="skill-tag">Vercel</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Vlocity</span>
+                </div>
+            </div>
+            <div class="skill-card" data-accent="orange">
+                <div class="skill-icon">
+                    <i data-lucide="sparkles" style="width: 32px; height: 32px;"></i>
+                </div>
+                <h3>AI & Herramientas</h3>
+                <p>Integracion de IA en flujos de trabajo y desarrollo asistido con herramientas modernas.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Claude Code</span>
+                    <span class="skill-tag">Cursor</span>
+                    <span class="skill-tag">GitHub Copilot</span>
+                    <span class="skill-tag">Speech APIs</span>
                 </div>
             </div>
         </div>
@@ -202,52 +234,182 @@
             <div class="section-tag">// Proyectos destacados</div>
             <h2 class="section-title">Mi Trabajo Reciente</h2>
         </div>
+
+        <!-- Featured Project: All1Fit -->
+        <div class="project-card featured-project">
+            <div class="project-visual"
+                style="position: relative; overflow: hidden; background: #0a0a0a; display: flex; align-items: center; justify-content: center;">
+                <img src="images/all1fit-logo.jpg" alt="All1Fit Logo"
+                    style="width: 45%; max-width: 280px; height: auto; border-radius: 12px; filter: invert(1); mix-blend-mode: screen; opacity: 0.9; transition: transform 0.3s ease;">
+                <div class="project-badge badge-appstore">
+                    <i data-lucide="download" style="width: 12px; height: 12px;"></i>
+                    App Store
+                </div>
+                <div class="featured-label">PROYECTO DESTACADO</div>
+            </div>
+            <div class="project-info">
+                <div class="project-type">iOS App - Publicada en App Store</div>
+                <h3>All1Fit</h3>
+                <p>App de fitness completa publicada en el App Store. Tracking de RM para CrossFit, entrenamientos
+                    hibridos, temporizador Tabata con Live Activities, integracion con HealthKit y Apple Watch companion
+                    app. La app definitiva para atletas.</p>
+                <div class="project-tech">
+                    <span>Swift</span>
+                    <span>SwiftUI</span>
+                    <span>HealthKit</span>
+                    <span>WatchOS</span>
+                    <span>Live Activities</span>
+                    <span>CloudKit</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/idanidev/All1Fit_iOS" target="_blank" rel="noopener noreferrer"
+                        class="project-link">
+                        <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
+                        Ver codigo
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div class="projects-grid">
             <!-- Clarity App -->
             <div class="project-card">
-                <div class="project-visual">
-                    <div class="project-mockup">
-                        <div class="mockup-header">
-                            <div class="mockup-dot"></div>
-                            <div class="mockup-dot"></div>
-                            <div class="mockup-dot"></div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                        </div>
-                    </div>
-                    <div class="project-badge"
-                        style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #00C853, #69F0AE); color: #000; padding: 4px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 600;">
-                        🚀 En Desarrollo</div>
+                <div class="project-visual app-icon-visual">
+                    <img src="images/clarity-icon.png" alt="Clarity App Icon" class="app-icon-img">
+                    <div class="project-badge badge-dev">En Desarrollo</div>
                 </div>
                 <div class="project-info">
                     <div class="project-type">iOS App Nativa</div>
                     <h3>Clarity</h3>
-                    <p>App iOS nativa de bienestar digital que ayuda a gestionar el tiempo de uso del móvil con
-                        recordatorios inteligentes y estadísticas detalladas. Actualmente desplegada en App Store.</p>
+                    <p>App de control de gastos personales con graficas detalladas, categorias inteligentes y
+                        sincronizacion con Firebase. Diseno minimalista centrado en la claridad de los datos.</p>
                     <div class="project-tech">
                         <span>Swift</span>
                         <span>SwiftUI</span>
-                        <span>iOS</span>
+                        <span>Firebase</span>
+                        <span>SwiftData</span>
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/idanidev/Clarity" target="_blank" rel="noopener noreferrer"
                             class="project-link">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            Ver código
+                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
+                            Ver codigo
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Rental Manager -->
+            <!-- RentalMngr-iOS -->
+            <div class="project-card">
+                <div class="project-visual app-icon-visual">
+                    <img src="images/rentalmngr-icon.png" alt="RentalMngr App Icon" class="app-icon-img">
+                    <div class="project-badge badge-new">Nuevo</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">iOS App Nativa</div>
+                    <h3>RentalMngr</h3>
+                    <p>Sistema completo y profesional para gestionar propiedades de alquiler, habitaciones, inquilinos y
+                        finanzas desde iOS. Control total de tu cartera inmobiliaria.</p>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>SwiftUI</span>
+                        <span>SwiftData</span>
+                        <span>Charts</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/idanidev/RentalMngr-iOS" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
+                            Ver codigo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RepoMind -->
+            <div class="project-card">
+                <div class="project-visual app-icon-visual">
+                    <img src="images/repomind-icon.png" alt="RepoMind App Icon" class="app-icon-img">
+                    <div class="project-badge badge-new">Nuevo</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">iOS App Nativa</div>
+                    <h3>RepoMind</h3>
+                    <p>App iOS que conecta con GitHub para obtener tus proyectos y te permite gestionar tareas por voz y
+                        texto. Tu asistente de desarrollo con inteligencia artificial integrada.</p>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>SwiftUI</span>
+                        <span>GitHub API</span>
+                        <span>Speech</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/idanidev/RepoMind" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
+                            Ver codigo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HomeMate -->
+            <div class="project-card">
+                <div class="project-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen screen-homemate">
+                            <div class="screen-header-bar">
+                                <span class="screen-title">HomeMate</span>
+                                <span class="screen-icon-small">
+                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="3">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="screen-card-mini">
+                                <div class="screen-check done"></div>
+                                <div class="screen-line" style="width: 65%; flex: none;"></div>
+                            </div>
+                            <div class="screen-card-mini">
+                                <div class="screen-check"></div>
+                                <div class="screen-line" style="width: 55%; flex: none;"></div>
+                            </div>
+                            <div class="screen-card-mini">
+                                <div class="screen-check done"></div>
+                                <div class="screen-line" style="width: 70%; flex: none;"></div>
+                            </div>
+                            <div class="screen-card-mini">
+                                <div class="screen-check"></div>
+                                <div class="screen-line" style="width: 50%; flex: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-badge badge-new">Nuevo</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">iOS App Nativa</div>
+                    <h3>HomeMate</h3>
+                    <p>App de gestion del hogar con listas de tareas domesticas, listas de compra y organizacion del
+                        hogar. Interfaz limpia y notificaciones inteligentes para no olvidar nada.</p>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>SwiftUI</span>
+                        <span>Notifications</span>
+                        <span>SwiftData</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/idanidev/HomeMate" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
+                            Ver codigo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rental Manager Web -->
             <div class="project-card">
                 <div class="project-visual">
                     <div class="project-mockup">
@@ -268,55 +430,18 @@
                 <div class="project-info">
                     <div class="project-type">Full Stack App</div>
                     <h3>Rental Manager</h3>
-                    <p>Sistema completo de gestión de alquileres con panel de administración, seguimiento de pagos y
-                        gestión de inquilinos.</p>
+                    <p>WebApp completa para gestionar habitaciones, contratos y fianzas de pisos de alquiler. Panel de
+                        administracion con seguimiento de pagos en tiempo real.</p>
                     <div class="project-tech">
                         <span>Svelte</span>
                         <span>SvelteKit</span>
-                        <span>Database</span>
+                        <span>Supabase</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/idanidev/rental-manager" target="_blank" rel="noopener noreferrer"
-                            class="project-link">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            Ver código
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- All1Fit - App Store -->
-            <div class="project-card">
-                <div class="project-visual"
-                    style="position: relative; overflow: hidden; background: #0a0a0a; display: flex; align-items: center; justify-content: center;">
-                    <img src="images/all1fit-logo.jpg" alt="All1Fit Logo"
-                        style="width: 50%; max-width: 300px; height: auto; border-radius: 12px; filter: invert(1); mix-blend-mode: screen; opacity: 0.9; transition: transform 0.3s ease;">
-                    <div class="project-badge"
-                        style="position: absolute; top: 12px; right: 12px; background: linear-gradient(135deg, #007AFF, #5856D6); color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 600;">
-                        App Store</div>
-                </div>
-                <div class="project-info">
-                    <div class="project-type">iOS App - App Store</div>
-                    <h3>All1Fit</h3>
-                    <p>App de fitness completa publicada en App Store. Incluye tracking de RM, entrenamientos híbridos,
-                        temporizador Tabata con Live Activities y Apple Watch companion app.</p>
-                    <div class="project-tech">
-                        <span>Swift</span>
-                        <span>SwiftUI</span>
-                        <span>HealthKit</span>
-                        <span>WatchOS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/idanidev/All1Fit_iOS" target="_blank" rel="noopener noreferrer"
-                            class="project-link">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            Ver código
+                        <a href="https://github.com/idanidev/rental-manager" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
+                            Ver codigo
                         </a>
                     </div>
                 </div>
@@ -325,39 +450,37 @@
             <!-- iOS Focus Reminder -->
             <div class="project-card">
                 <div class="project-visual">
-                    <div class="project-mockup">
-                        <div class="mockup-header">
-                            <div class="mockup-dot"></div>
-                            <div class="mockup-dot"></div>
-                            <div class="mockup-dot"></div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
+                    <div class="phone-mockup">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen screen-focus">
+                            <div class="screen-header-bar">
+                                <span class="screen-title">Focus</span>
+                            </div>
+                            <div class="screen-timer">
+                                <div class="timer-ring"></div>
+                                <span class="timer-text">25:00</span>
+                            </div>
+                            <div class="screen-card-mini" style="justify-content: center;">
+                                <div class="screen-line" style="width: 40%;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="project-info">
-                    <div class="project-type">iOS App</div>
-                    <h3>iOS Focus Reminder</h3>
-                    <p>Aplicación nativa para iOS que ayuda a mantener la concentración mediante recordatorios
-                        inteligentes y técnicas de productividad.</p>
+                    <div class="project-type">iOS App Nativa</div>
+                    <h3>Focus Reminder</h3>
+                    <p>Aplicacion nativa para iOS que ayuda a mantener la concentracion mediante recordatorios
+                        inteligentes y tecnicas de productividad como Pomodoro.</p>
                     <div class="project-tech">
                         <span>Swift</span>
                         <span>SwiftUI</span>
-                        <span>iOS</span>
+                        <span>Notifications</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/idanidev/IOsFocusReminder" target="_blank" rel="noopener noreferrer"
-                            class="project-link">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                            Ver código
+                        <a href="https://github.com/idanidev/IOsFocusReminder" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
+                            Ver codigo
                         </a>
                     </div>
                 </div>
@@ -467,9 +590,9 @@
                     <h3>Full Stack Developer</h3>
                     <div class="timeline-company">Naviera Armas</div>
                     <ul>
-                        <li>Migración de Angular v10 a v16 con creación de librerías propias</li>
+                        <li>Migracion de Angular v10 a v16 con creacion de librerias propias</li>
                         <li>Desarrollo de microservicio de parcelas de puertos</li>
-                        <li>Implementación de arquitectura modular y escalable</li>
+                        <li>Implementacion de arquitectura modular y escalable</li>
                     </ul>
                 </div>
             </div>
@@ -481,8 +604,8 @@
                     <div class="timeline-company">Minsait</div>
                     <ul>
                         <li>Desarrollo con Angular, PrimeNG y Spring Boot</li>
-                        <li>Gestión de bases de datos con SQL Developer y Oracle</li>
-                        <li>Implementación de interfaces responsive con TypeScript</li>
+                        <li>Gestion de bases de datos con SQL Developer y Oracle</li>
+                        <li>Implementacion de interfaces responsive con TypeScript</li>
                     </ul>
                 </div>
             </div>
@@ -494,8 +617,8 @@
                     <div class="timeline-company">NTT Data</div>
                     <ul>
                         <li>Desarrollo en plataforma Salesforce</li>
-                        <li>Implementación de soluciones con Vlocity y OmniStudio</li>
-                        <li>Configuración de flujos de trabajo automatizados</li>
+                        <li>Implementacion de soluciones con Vlocity y OmniStudio</li>
+                        <li>Configuracion de flujos de trabajo automatizados</li>
                     </ul>
                 </div>
             </div>
@@ -506,9 +629,9 @@
                     <h3>Python Developer</h3>
                     <div class="timeline-company">Octupus Technologies</div>
                     <ul>
-                        <li>Desarrollo de módulos en Odoo</li>
-                        <li>Automatización de procesos con Python</li>
-                        <li>Integración de sistemas empresariales</li>
+                        <li>Desarrollo de modulos en Odoo</li>
+                        <li>Automatizacion de procesos con Python</li>
+                        <li>Integracion de sistemas empresariales</li>
                     </ul>
                 </div>
             </div>
@@ -518,20 +641,19 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="section-header reveal">
-            <div class="section-tag">Contacto</div>
-            <h2>¿Tienes un proyecto en mente?</h2>
+            <div class="section-tag">// Contacto</div>
+            <h2 class="section-title">Hablemos</h2>
         </div>
         <div class="contact-wrapper-new reveal">
             <div class="contact-card-unified">
                 <img src="images/personal-photo.jpg" alt="Daniel Benito" class="card-avatar">
                 <div class="card-name">Daniel Benito</div>
-                <div class="card-title">Full Stack Developer</div>
+                <div class="card-title">Full Stack & Apple Developer</div>
                 <div class="card-divider"></div>
                 <p class="card-description">
-                    Estoy disponible para proyectos freelance y oportunidades laborales. ¡Hablemos!
+                    Disponible para proyectos freelance, colaboraciones y oportunidades laborales.
                 </p>
 
-                <!-- Contact Details -->
                 <div class="card-contact-list">
                     <a href="mailto:idanibenito2@gmail.com" class="card-contact-item">
                         <i data-lucide="mail" class="card-contact-icon"></i>
@@ -543,33 +665,26 @@
                     </a>
                     <a href="https://linkedin.com/in/iDanielBenito" target="_blank" rel="noopener noreferrer"
                         class="card-contact-item">
-                        <i data-lucide="linkedin" class="card-contact-icon"></i>
+                        <svg class="card-contact-icon" width="18" height="18" fill="currentColor"><use href="#icon-linkedin"/></svg>
                         <span>/in/iDanielBenito</span>
                     </a>
                     <a href="https://github.com/idanidev" target="_blank" rel="noopener noreferrer"
                         class="card-contact-item">
-                        <i data-lucide="github" class="card-contact-icon"></i>
+                        <svg class="card-contact-icon" width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
                         <span>@idanidev</span>
                     </a>
                 </div>
 
                 <div class="card-divider"></div>
 
-                <!-- Social Links -->
                 <div class="card-social">
                     <a href="https://github.com/idanidev" target="_blank" rel="noopener noreferrer" class="social-link"
                         aria-label="GitHub">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
+                        <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
                     </a>
                     <a href="https://linkedin.com/in/iDanielBenito" target="_blank" rel="noopener noreferrer"
                         class="social-link" aria-label="LinkedIn">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                        </svg>
+                        <svg width="18" height="18" fill="currentColor"><use href="#icon-linkedin"/></svg>
                     </a>
                     <a href="mailto:idanibenito2@gmail.com" class="social-link" aria-label="Email">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -580,7 +695,6 @@
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
     <!-- Scroll to Top Button -->
@@ -590,7 +704,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Daniel Benito Díaz.</p>
+        <p>&copy; 2026 Daniel Benito Diaz. Crafted with code.</p>
         <div class="footer-links">
             <a href="https://github.com/idanidev" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="https://linkedin.com/in/iDanielBenito" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -617,11 +731,11 @@
     <script>
         lucide.createIcons();
 
-        // CRITICAL: Force avatar visibility on mobile
+        // Force avatar visibility on mobile (desktop uses JS animation)
         window.addEventListener('DOMContentLoaded', function () {
+            if (window.innerWidth > 768) return;
             const avatar = document.querySelector('#hero-avatar');
             const avatarImg = document.querySelector('#hero-avatar img');
-
             if (avatar && avatarImg) {
                 avatar.style.cssText = 'display: block !important; opacity: 1 !important; visibility: visible !important;';
                 avatarImg.style.cssText = 'display: block !important; opacity: 1 !important; visibility: visible !important; width: 140px !important; height: 140px !important; border-radius: 50%; margin: 0 auto;';

@@ -205,13 +205,7 @@ class MobileMenu {
             }
         });
 
-        // Prevent scroll when menu is open
-        const preventScroll = (e) => {
-            if (this.isOpen) {
-                e.preventDefault();
-            }
-        };
-        document.addEventListener('touchmove', preventScroll, { passive: false });
+        this._preventScroll = (e) => e.preventDefault();
     }
 
     toggle() {
@@ -228,6 +222,7 @@ class MobileMenu {
         this.mobileMenu.classList.add('active');
         this.overlay.classList.add('active');
         document.body.style.overflow = 'hidden';
+        document.addEventListener('touchmove', this._preventScroll, { passive: false });
 
         // Animate hamburger
         anime({
@@ -264,6 +259,7 @@ class MobileMenu {
         this.mobileMenu.classList.remove('active');
         this.overlay.classList.remove('active');
         document.body.style.overflow = '';
+        document.removeEventListener('touchmove', this._preventScroll);
 
         // Animate hamburger back
         anime({

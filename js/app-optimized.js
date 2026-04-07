@@ -16,6 +16,10 @@ class Portfolio {
 class Navigation {
     constructor() {
         this.nav = document.querySelector('nav');
+        this.scrollIndicator = document.querySelector('.scroll-indicator');
+        this.sections = document.querySelectorAll('section[id]');
+        this.navLinks = document.querySelectorAll('.nav-links a');
+        this.currentActiveId = null;
         this.init();
     }
 
@@ -29,51 +33,61 @@ class Navigation {
                 const target = document.querySelector(anchor.getAttribute('href'));
 
                 if (target) {
-                    const targetPosition = target.offsetTop - 80;
-
-                    anime({
-                        targets: document.documentElement,
-                        scrollTop: targetPosition,
-                        duration: 800,
-                        easing: 'easeInOutQuad'
-                    });
+                    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
                 }
             });
         });
 
-        // Nav background on scroll
+        // Single consolidated scroll handler
+        let scrollTicking = false;
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 50) {
-                this.nav.style.background = 'rgba(10, 10, 15, 0.95)';
-                this.nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-            } else {
-                this.nav.style.background = 'rgba(10, 10, 15, 0.8)';
-                this.nav.style.boxShadow = 'none';
+            if (!scrollTicking) {
+                requestAnimationFrame(() => {
+                    const scrollY = window.pageYOffset;
+                    this.updateScrollIndicator(scrollY);
+                    this.updateNavBackground(scrollY);
+                    this.updateActiveNavLink(scrollY);
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
             }
-        });
+        }, { passive: true });
 
-        // Active nav link on scroll
-        this.updateActiveNavLink();
-        window.addEventListener('scroll', () => this.updateActiveNavLink());
+        this.updateActiveNavLink(window.pageYOffset);
     }
 
-    updateActiveNavLink() {
-        const sections = document.querySelectorAll('section[id]');
-        const scrollY = window.pageYOffset;
+    updateScrollIndicator(scrollY) {
+        if (this.scrollIndicator && scrollY > 100) {
+            this.scrollIndicator.classList.add('hidden');
+        }
+    }
 
-        sections.forEach(section => {
-            const sectionHeight = section.offsetHeight;
+    updateNavBackground(scrollY) {
+        if (scrollY > 50) {
+            this.nav.style.background = 'rgba(10, 10, 15, 0.95)';
+            this.nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+        } else {
+            this.nav.style.background = 'rgba(10, 10, 15, 0.8)';
+            this.nav.style.boxShadow = 'none';
+        }
+    }
+
+    updateActiveNavLink(scrollY) {
+        let activeId = null;
+
+        this.sections.forEach(section => {
             const sectionTop = section.offsetTop - 100;
-            const sectionId = section.getAttribute('id');
-            const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
-
-            if (navLink && scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                document.querySelectorAll('.nav-links a').forEach(link => {
-                    link.style.color = '';
-                });
-                navLink.style.color = 'var(--accent-cyan)';
+            if (scrollY > sectionTop && scrollY <= sectionTop + section.offsetHeight) {
+                activeId = section.getAttribute('id');
             }
         });
+
+        if (activeId !== this.currentActiveId) {
+            this.currentActiveId = activeId;
+            this.navLinks.forEach(link => {
+                link.style.color = link.getAttribute('href') === `#${activeId}` ? 'var(--accent-cyan)' : '';
+            });
+        }
     }
 }
 
@@ -150,28 +164,6 @@ class Interactions {
      * Card hover effects
      */
     initCardHovers() {
-        // Contact items
-        const contactItems = document.querySelectorAll('.contact-item');
-        contactItems.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                anime({
-                    targets: item,
-                    translateX: 5,
-                    duration: 300,
-                    easing: 'easeOutQuad'
-                });
-            });
-
-            item.addEventListener('mouseleave', () => {
-                anime({
-                    targets: item,
-                    translateX: 0,
-                    duration: 300,
-                    easing: 'easeOutQuad'
-                });
-            });
-        });
-
         // Stats on click
         document.querySelectorAll('.stat-number').forEach(stat => {
             stat.style.cursor = 'pointer';
@@ -190,28 +182,18 @@ class Interactions {
      * Scroll progress indicator
      */
     initScrollProgress() {
-        const progressBar = document.createElement('div');
-        progressBar.className = 'scroll-progress';
-        progressBar.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #00f5d4, #9b5de5, #f15bb5);
-            z-index: 10000;
-            transform-origin: left;
-            width: 0%;
-        `;
-        document.body.appendChild(progressBar);
+        this.progressBar = document.getElementById('scrollProgress');
+        if (!this.progressBar) return;
+        this.updateScrollProgress();
 
-        const updateProgress = () => {
-            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = (window.pageYOffset / windowHeight) * 100;
-            progressBar.style.width = scrolled + '%';
-        };
+        window.addEventListener('scroll', () => this.updateScrollProgress(), { passive: true });
+    }
 
-        window.addEventListener('scroll', updateProgress);
-        updateProgress();
+    updateScrollProgress() {
+        if (!this.progressBar) return;
+        const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = (window.pageYOffset / windowHeight) * 100;
+        this.progressBar.style.width = scrolled + '%';
     }
 }
 

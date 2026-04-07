@@ -143,15 +143,6 @@ class OptimizedAnimations {
       delay: 400,
     });
 
-    // Animate gradient text with subtle color shift
-    anime({
-      targets: ".hero .gradient",
-      filter: ["hue-rotate(0deg)", "hue-rotate(10deg)", "hue-rotate(0deg)"],
-      duration: 6000,
-      easing: "easeInOutQuad",
-      loop: true,
-    });
-
     // Animate hero description
     anime({
       targets: ".hero-description",
@@ -262,26 +253,6 @@ class OptimizedAnimations {
 
     skillCards.forEach((card) => observer.observe(card));
 
-    // Subtle hover effect
-    skillCards.forEach((card) => {
-      card.addEventListener("mouseenter", () => {
-        anime({
-          targets: card,
-          translateY: -5,
-          duration: 300,
-          easing: "easeOutQuad",
-        });
-      });
-
-      card.addEventListener("mouseleave", () => {
-        anime({
-          targets: card,
-          translateY: 0,
-          duration: 300,
-          easing: "easeOutQuad",
-        });
-      });
-    });
   }
 
   /**
@@ -342,25 +313,6 @@ class OptimizedAnimations {
     projectCards.forEach((card) => observer.observe(card));
 
     // Subtle hover
-    projectCards.forEach((card) => {
-      card.addEventListener("mouseenter", () => {
-        anime({
-          targets: card,
-          translateY: -8,
-          duration: 400,
-          easing: "easeOutQuad",
-        });
-      });
-
-      card.addEventListener("mouseleave", () => {
-        anime({
-          targets: card,
-          translateY: 0,
-          duration: 400,
-          easing: "easeOutQuad",
-        });
-      });
-    });
   }
 
   /**
@@ -431,34 +383,39 @@ class OptimizedAnimations {
     reveals.forEach((reveal) => observer.observe(reveal));
 
     // Subtle parallax for orbs
+    const orb1 = document.querySelector(".orb-1");
+    const orb2 = document.querySelector(".orb-2");
+    const orb3 = document.querySelector(".orb-3");
+    let orbTicking = false;
+
     window.addEventListener("scroll", () => {
-      const scrolled = window.pageYOffset;
-
-      anime({
-        targets: ".orb-1",
-        translateY: scrolled * 0.05,
-        duration: 0,
-        easing: "linear",
-      });
-
-      anime({
-        targets: ".orb-2",
-        translateY: scrolled * 0.08,
-        duration: 0,
-        easing: "linear",
-      });
-
-      anime({
-        targets: ".orb-3",
-        translateY: scrolled * 0.1,
-        duration: 0,
-        easing: "linear",
-      });
-    });
+      if (!orbTicking) {
+        requestAnimationFrame(() => {
+          const scrolled = window.pageYOffset;
+          if (orb1) orb1.style.transform = `translateY(${scrolled * 0.05}px)`;
+          if (orb2) orb2.style.transform = `translateY(${scrolled * 0.08}px)`;
+          if (orb3) orb3.style.transform = `translateY(${scrolled * 0.1}px)`;
+          orbTicking = false;
+        });
+        orbTicking = true;
+      }
+    }, { passive: true });
   }
 }
 
 // Initialize animations
 document.addEventListener("DOMContentLoaded", () => {
   new OptimizedAnimations();
+
+  // Fallback: ensure all elements become visible after page load
+  // This catches any elements that may have been missed by IntersectionObserver
+  setTimeout(() => {
+    document.querySelectorAll('.skill-card, .project-card, .timeline-content, .timeline-dot').forEach(el => {
+      const style = getComputedStyle(el);
+      if (style.opacity === '0') {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      }
+    });
+  }, 3000);
 });

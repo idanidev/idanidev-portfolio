@@ -80,9 +80,6 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .contact-wrapper {
-    gap: 3rem;
-  }
 }
 
 /* ========== TABLET LANDSCAPE (900px - 1023px) ========== */
@@ -126,10 +123,6 @@
     padding: 2rem;
   }
 
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
 
   .stats-bar {
     gap: 2rem;
@@ -258,17 +251,6 @@
     padding: 1.5rem;
   }
 
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-visual {
-    display: none;
-  }
-
-  .contact-info h2 {
-    font-size: 2.5rem;
-  }
 
   footer {
     padding: 2.5rem 5%;
@@ -438,25 +420,6 @@
     font-size: 1.2rem;
   }
 
-  .contact-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-visual {
-    display: none;
-  }
-
-  .contact-info h2 {
-    font-size: 2.2rem;
-  }
-
-  .contact-info p {
-    font-size: 1rem;
-  }
-
-  .contact-item {
-    padding: 1rem;
-  }
 
   footer {
     flex-direction: column;
@@ -629,19 +592,6 @@
     height: 14px;
   }
 
-  .contact-info h2 {
-    font-size: 2rem;
-  }
-
-  .contact-item {
-    padding: 0.9rem;
-  }
-
-  .contact-item-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
-  }
 }
 
 /* ========== MOBILE SMALL (320px - 479px) ========== */
@@ -656,12 +606,6 @@
 
   .show-mobile {
     display: block;
-  }
-
-  /* Cursor hidden on small mobile */
-  .cursor,
-  .cursor-dot {
-    display: none;
   }
 
   /* Hero wrapper mobile */
@@ -907,39 +851,6 @@
     margin-bottom: 0.4rem;
   }
 
-  .contact-info h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .contact-info p {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-details {
-    gap: 0.7rem;
-  }
-
-  .contact-item {
-    padding: 0.8rem;
-    border-radius: 10px;
-  }
-
-  .contact-item-icon {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
-  }
-
-  .contact-item-text {
-    font-size: 0.85rem;
-  }
-
-  .contact-item-label {
-    font-size: 0.7rem;
-  }
-
   footer {
     padding: 1.5rem 4%;
   }
@@ -975,6 +886,77 @@
   }
 }
 
+/* ========== PHONE MOCKUP RESPONSIVE ========== */
+@media (max-width: 767px) {
+    .phone-mockup {
+        width: 120px;
+        height: 240px;
+        border-radius: 24px;
+    }
+
+    .phone-notch {
+        width: 50px;
+        height: 16px;
+        top: 6px;
+    }
+
+    .phone-screen {
+        padding: 30px 8px 8px;
+        gap: 5px;
+        border-radius: 21px;
+    }
+
+    .screen-title { font-size: 7px; }
+    .screen-card-mini { padding: 5px; gap: 4px; border-radius: 5px; }
+    .screen-line { height: 3px; }
+    .screen-chart { height: 40px; gap: 3px; }
+    .chart-bar { border-radius: 2px 2px 0 0; }
+    .screen-dot { width: 6px; height: 6px; }
+    .screen-repo-item { padding: 5px; border-radius: 4px; }
+    .screen-task { width: 7px; height: 7px; border-radius: 2px; }
+    .screen-check { width: 10px; height: 10px; border-radius: 3px; }
+    .screen-voice-btn { width: 26px; height: 26px; }
+    .timer-ring { width: 55px; height: 55px; border-width: 2px; }
+    .timer-text { font-size: 10px; }
+
+    .featured-project::before { border-radius: calc(16px + 2px); }
+    .featured-label { font-size: 0.5rem; padding: 3px 8px; letter-spacing: 1px; }
+    .project-badge { font-size: 0.6rem; padding: 3px 8px; }
+
+    .scroll-indicator { bottom: 1rem; }
+    .scroll-mouse { width: 20px; height: 32px; }
+    .scroll-wheel { width: 3px; height: 6px; }
+    .scroll-indicator span { font-size: 0.55rem; }
+}
+
+@media (max-width: 479px) {
+    .phone-mockup {
+        width: 100px;
+        height: 200px;
+        border-radius: 20px;
+        border-width: 2px;
+    }
+
+    .phone-notch {
+        width: 40px;
+        height: 14px;
+        top: 5px;
+        border-radius: 10px;
+    }
+
+    .phone-screen {
+        padding: 24px 6px 6px;
+        gap: 4px;
+        border-radius: 18px;
+    }
+
+    .screen-title { font-size: 6px; }
+    .screen-icon-small { font-size: 7px; }
+    .screen-chart { height: 30px; }
+    .timer-ring { width: 40px; height: 40px; }
+    .timer-text { font-size: 8px; }
+}
+
 /* ========== LANDSCAPE ORIENTATION ========== */
 @media (max-height: 500px) and (orientation: landscape) {
   .hero {
@@ -1006,23 +988,15 @@
   /* Larger touch targets */
   .btn,
   .nav-links a,
-  .contact-item,
   .project-link {
     min-height: 44px;
     display: inline-flex;
     align-items: center;
   }
 
-  /* Disable hover-only effects */
-  .cursor,
-  .cursor-dot {
-    display: none;
-  }
-
   /* Better tap feedback */
   .btn:active,
-  .skill-card:active,
-  .contact-item:active {
+  .skill-card:active {
     transform: scale(0.98);
     opacity: 0.9;
   }
@@ -1063,8 +1037,6 @@
 
 /* ========== PRINT STYLES ========== */
 @media print {
-  .cursor,
-  .cursor-dot,
   .noise,
   .grid-bg,
   .orb,
