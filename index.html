@@ -237,10 +237,11 @@
 
         <!-- Featured Project: All1Fit -->
         <div class="project-card featured-project">
-            <div class="project-visual"
-                style="position: relative; overflow: hidden; background: #0a0a0a; display: flex; align-items: center; justify-content: center;">
-                <img src="images/all1fit-logo.jpg" alt="All1Fit Logo"
-                    style="width: 45%; max-width: 280px; height: auto; border-radius: 12px; filter: invert(1); mix-blend-mode: screen; opacity: 0.9; transition: transform 0.3s ease;">
+            <div class="project-visual" style="background: #0a0a0a;">
+                <div class="phone-frame">
+                    <div class="phone-dynamic-island"></div>
+                    <img src="images/all1fit-screenshot.jpg" alt="All1Fit App Screenshot" class="phone-screen-img">
+                </div>
                 <div class="project-badge badge-appstore">
                     <i data-lucide="download" style="width: 12px; height: 12px;"></i>
                     App Store
@@ -274,8 +275,11 @@
         <div class="projects-grid">
             <!-- Clarity App -->
             <div class="project-card">
-                <div class="project-visual app-icon-visual">
-                    <img src="images/clarity-icon.png" alt="Clarity App Icon" class="app-icon-img">
+                <div class="project-visual" style="background: #0a0e1a;">
+                    <div class="phone-frame">
+                        <div class="phone-dynamic-island"></div>
+                        <img src="images/clarity-screenshot.png" alt="Clarity App Screenshot" class="phone-screen-img">
+                    </div>
                     <div class="project-badge badge-dev">En Desarrollo</div>
                 </div>
                 <div class="project-info">
@@ -291,6 +295,66 @@
                     </div>
                     <div class="project-links">
                         <a href="https://github.com/idanidev/Clarity" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
+                            Ver codigo
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- iTurn -->
+            <div class="project-card">
+                <div class="project-visual" style="background: #f5f5f7;">
+                    <div class="phone-frame" style="background: #2c2c2e;">
+                        <div class="phone-dynamic-island"></div>
+                        <img src="images/iturn-screenshot.png" alt="iTurn App Screenshot" class="phone-screen-img">
+                    </div>
+                    <div class="project-badge badge-appstore">
+                        <i data-lucide="download" style="width: 12px; height: 12px;"></i>
+                        App Store
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">iOS App - Publicada en App Store</div>
+                    <h3>iTurn</h3>
+                    <p>App iOS para importar tu calendario laboral desde PDF y consultarlo en tu iPhone. Pago unico, sin suscripciones. Deteccion automatica de turnos y sincronizacion con el calendario nativo.</p>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>SwiftUI</span>
+                        <span>PDFKit</span>
+                        <span>EventKit</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/idanidev/iturn-web" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
+                            Ver web
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RepoMind -->
+            <div class="project-card">
+                <div class="project-visual" style="background: linear-gradient(180deg, #0d0d1a 0%, #1a0d2e 100%);">
+                    <img src="images/repomind-screenshot.png" alt="RepoMind App Screenshot"
+                        style="width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; transition: transform 0.5s ease;">
+                    <div class="project-badge badge-new">Nuevo</div>
+                </div>
+                <div class="project-info">
+                    <div class="project-type">iOS App Nativa</div>
+                    <h3>RepoMind</h3>
+                    <p>App iOS que conecta con GitHub para obtener tus proyectos y te permite gestionar tareas por voz y
+                        texto. Tu asistente de desarrollo con inteligencia artificial integrada.</p>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>SwiftUI</span>
+                        <span>GitHub API</span>
+                        <span>Speech</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/idanidev/RepoMind" target="_blank" rel="noopener noreferrer"
                             class="project-link">
                             <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
                             Ver codigo
@@ -326,28 +390,38 @@
                 </div>
             </div>
 
-            <!-- RepoMind -->
+            <!-- Brahma Sant Pere Pescador -->
             <div class="project-card">
-                <div class="project-visual app-icon-visual">
-                    <img src="images/repomind-icon.png" alt="RepoMind App Icon" class="app-icon-img">
+                <div class="project-visual" style="background: #1a1a1a;">
+                    <div class="browser-frame">
+                        <div class="browser-bar">
+                            <div class="browser-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="browser-url">gallinasbrahma.com</div>
+                        </div>
+                        <div class="browser-content">
+                            <img src="images/brahma-screenshot.png" alt="Brahma Sant Pere Pescador Website">
+                        </div>
+                    </div>
                     <div class="project-badge badge-new">Nuevo</div>
                 </div>
                 <div class="project-info">
-                    <div class="project-type">iOS App Nativa</div>
-                    <h3>RepoMind</h3>
-                    <p>App iOS que conecta con GitHub para obtener tus proyectos y te permite gestionar tareas por voz y
-                        texto. Tu asistente de desarrollo con inteligencia artificial integrada.</p>
+                    <div class="project-type">Web App - Produccion</div>
+                    <h3>Brahma Sant Pere Pescador</h3>
+                    <p>Web profesional para criadero de gallinas Brahma ornamentales. Catalogo de variedades, galeria, mapa interactivo con Leaflet y diseno responsive con animaciones fluidas.</p>
                     <div class="project-tech">
-                        <span>Swift</span>
-                        <span>SwiftUI</span>
-                        <span>GitHub API</span>
-                        <span>Speech</span>
+                        <span>Next.js 16</span>
+                        <span>React 19</span>
+                        <span>Tailwind CSS</span>
+                        <span>Leaflet</span>
+                        <span>Motion</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/idanidev/RepoMind" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.gallinasbrahma.com" target="_blank" rel="noopener noreferrer"
                             class="project-link">
-                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
-                            Ver codigo
+                            <i data-lucide="external-link" style="width: 18px; height: 18px;"></i>
+                            Ver web
                         </a>
                     </div>
                 </div>
@@ -486,35 +560,6 @@
                 </div>
             </div>
 
-            <!-- iTurn -->
-            <div class="project-card">
-                <div class="project-visual app-icon-visual">
-                    <img src="images/iturn-icon.png" alt="iTurn App Icon" class="app-icon-img">
-                    <div class="project-badge badge-appstore">
-                        <i data-lucide="download" style="width: 12px; height: 12px;"></i>
-                        App Store
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="project-type">iOS App - Publicada en App Store</div>
-                    <h3>iTurn</h3>
-                    <p>App iOS para importar tu calendario laboral desde PDF y consultarlo en tu iPhone. Pago unico, sin suscripciones. Deteccion automatica de turnos y sincronizacion con el calendario nativo.</p>
-                    <div class="project-tech">
-                        <span>Swift</span>
-                        <span>SwiftUI</span>
-                        <span>PDFKit</span>
-                        <span>EventKit</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/idanidev/iturn-web" target="_blank" rel="noopener noreferrer"
-                            class="project-link">
-                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
-                            Ver web
-                        </a>
-                    </div>
-                </div>
-            </div>
-
             <!-- InSync -->
             <div class="project-card">
                 <div class="project-visual">
@@ -565,49 +610,6 @@
                             class="project-link">
                             <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
                             Ver codigo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Brahma Sant Pere Pescador -->
-            <div class="project-card">
-                <div class="project-visual">
-                    <div class="project-mockup">
-                        <div class="mockup-header">
-                            <div class="mockup-dot"></div>
-                            <div class="mockup-dot"></div>
-                            <div class="mockup-dot"></div>
-                        </div>
-                        <div class="mockup-content mockup-brahma">
-                            <div class="mockup-line" style="width: 40%; height: 14px; margin-bottom: 12px;"></div>
-                            <div class="mockup-line" style="width: 70%;"></div>
-                            <div class="mockup-line" style="width: 55%;"></div>
-                            <div style="display: flex; gap: 8px; margin-top: 8px;">
-                                <div style="flex:1; height: 40px; background: rgba(255,255,255,0.06); border-radius: 8px;"></div>
-                                <div style="flex:1; height: 40px; background: rgba(255,255,255,0.06); border-radius: 8px;"></div>
-                                <div style="flex:1; height: 40px; background: rgba(255,255,255,0.06); border-radius: 8px;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-badge badge-new">Nuevo</div>
-                </div>
-                <div class="project-info">
-                    <div class="project-type">Web App - Produccion</div>
-                    <h3>Brahma Sant Pere Pescador</h3>
-                    <p>Web profesional para criadero de gallinas Brahma ornamentales. Catalogo de variedades, galeria, mapa interactivo con Leaflet y diseno responsive con animaciones fluidas.</p>
-                    <div class="project-tech">
-                        <span>Next.js 16</span>
-                        <span>React 19</span>
-                        <span>Tailwind CSS</span>
-                        <span>Leaflet</span>
-                        <span>Motion</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://www.gallinasbrahma.com" target="_blank" rel="noopener noreferrer"
-                            class="project-link">
-                            <i data-lucide="external-link" style="width: 18px; height: 18px;"></i>
-                            Ver web
                         </a>
                     </div>
                 </div>
