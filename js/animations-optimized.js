@@ -382,24 +382,8 @@ class OptimizedAnimations {
 
     reveals.forEach((reveal) => observer.observe(reveal));
 
-    // Subtle parallax for orbs
-    const orb1 = document.querySelector(".orb-1");
-    const orb2 = document.querySelector(".orb-2");
-    const orb3 = document.querySelector(".orb-3");
-    let orbTicking = false;
-
-    window.addEventListener("scroll", () => {
-      if (!orbTicking) {
-        requestAnimationFrame(() => {
-          const scrolled = window.pageYOffset;
-          if (orb1) orb1.style.transform = `translateY(${scrolled * 0.05}px)`;
-          if (orb2) orb2.style.transform = `translateY(${scrolled * 0.08}px)`;
-          if (orb3) orb3.style.transform = `translateY(${scrolled * 0.1}px)`;
-          orbTicking = false;
-        });
-        orbTicking = true;
-      }
-    }, { passive: true });
+    // Parallax desactivado: chocaba con keyframe `animation: float` y forzaba
+    // repaints del orb con filter: blur(80px) en cada scroll frame.
   }
 }
 

@@ -25,6 +25,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
         rel="stylesheet">
@@ -79,7 +81,7 @@
     <section class="hero" id="about">
         <div class="hero-wrapper">
             <div class="hero-avatar" id="hero-avatar">
-                <img src="images/idanidev-avatar.jpg" alt="iDaniDev Logo" class="hero-avatar-img">
+                <img loading="eager" decoding="async" fetchpriority="high" src="images/idanidev-avatar.jpg" alt="iDaniDev Logo" class="hero-avatar-img">
             </div>
             <div class="hero-content">
                 <div class="hero-tag">
@@ -240,9 +242,9 @@
             <div class="project-visual" style="background: #0a0a0a;">
                 <div class="phone-frame">
                     <div class="phone-dynamic-island"></div>
-                    <img src="images/all1fit-screenshot.jpg" alt="All1Fit App Screenshot" class="phone-screen-img">
+                    <img loading="lazy" decoding="async" src="images/all1fit-screenshot.jpg" alt="All1Fit App Screenshot" class="phone-screen-img">
                 </div>
-                <img src="images/all1fit-logo.jpg" alt="All1Fit Icon" class="floating-icon" style="border-radius: 14px; filter: invert(1); mix-blend-mode: screen;">
+                <img loading="lazy" decoding="async" src="images/all1fit-logo.jpg" alt="All1Fit Icon" class="floating-icon" style="border-radius: 14px; filter: invert(1); mix-blend-mode: screen;">
                 <div class="project-badge badge-appstore">
                     <i data-lucide="download" style="width: 12px; height: 12px;"></i>
                     App Store
@@ -279,9 +281,9 @@
                 <div class="project-visual" style="background: #0a0e1a;">
                     <div class="phone-frame">
                         <div class="phone-dynamic-island"></div>
-                        <img src="images/clarity-screenshot.png" alt="Clarity App Screenshot" class="phone-screen-img">
+                        <img loading="lazy" decoding="async" src="images/clarity-screenshot.jpg" alt="Clarity App Screenshot" class="phone-screen-img">
                     </div>
-                    <img src="images/clarity-icon.png" alt="Clarity Icon" class="floating-icon">
+                    <img loading="lazy" decoding="async" src="images/clarity-icon.png" alt="Clarity Icon" class="floating-icon">
                     <div class="project-badge badge-dev">En Desarrollo</div>
                 </div>
                 <div class="project-info">
@@ -310,9 +312,9 @@
                 <div class="project-visual" style="background: #f5f5f7;">
                     <div class="phone-frame" style="background: #2c2c2e;">
                         <div class="phone-dynamic-island"></div>
-                        <img src="images/iturn-screenshot.png" alt="iTurn App Screenshot" class="phone-screen-img">
+                        <img loading="lazy" decoding="async" src="images/iturn-screenshot.jpg" alt="iTurn App Screenshot" class="phone-screen-img">
                     </div>
-                    <img src="images/iturn-icon.png" alt="iTurn Icon" class="floating-icon">
+                    <img loading="lazy" decoding="async" src="images/iturn-icon.png" alt="iTurn Icon" class="floating-icon">
                     <div class="project-badge badge-appstore">
                         <i data-lucide="download" style="width: 12px; height: 12px;"></i>
                         App Store
@@ -341,7 +343,7 @@
             <!-- RepoMind -->
             <div class="project-card">
                 <div class="project-visual app-icon-visual">
-                    <img src="images/repomind-icon.png" alt="RepoMind App Icon" class="app-icon-img">
+                    <img loading="lazy" decoding="async" src="images/repomind-icon.png" alt="RepoMind App Icon" class="app-icon-img">
                     <div class="project-badge badge-new">Nuevo</div>
                 </div>
                 <div class="project-info">
@@ -368,7 +370,7 @@
             <!-- RentalMngr-iOS -->
             <div class="project-card">
                 <div class="project-visual app-icon-visual">
-                    <img src="images/rentalmngr-icon.png" alt="RentalMngr App Icon" class="app-icon-img">
+                    <img loading="lazy" decoding="async" src="images/rentalmngr-icon.png" alt="RentalMngr App Icon" class="app-icon-img">
                     <div class="project-badge badge-new">Nuevo</div>
                 </div>
                 <div class="project-info">
@@ -403,7 +405,7 @@
                             <div class="browser-url">gallinasbrahma.com</div>
                         </div>
                         <div class="browser-content">
-                            <img src="images/brahma-screenshot.png" alt="Brahma Sant Pere Pescador Website">
+                            <img loading="lazy" decoding="async" src="images/brahma-screenshot.jpg" alt="Brahma Sant Pere Pescador Website">
                         </div>
                     </div>
                     <div class="project-badge badge-new">Nuevo</div>
@@ -689,7 +691,7 @@
         </div>
         <div class="contact-wrapper-new reveal">
             <div class="contact-card-unified">
-                <img src="images/personal-photo.jpg" alt="Daniel Benito" class="card-avatar">
+                <img loading="lazy" decoding="async" src="images/personal-photo.jpg" alt="Daniel Benito" class="card-avatar">
                 <div class="card-name">Daniel Benito</div>
                 <div class="card-title">Full Stack & Apple Developer</div>
                 <div class="card-divider"></div>
@@ -756,23 +758,23 @@
     </footer>
 
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <!-- AnimeJS Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
         integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
 
     <!-- Custom Scripts - Optimized -->
-    <script src="js/animations-optimized.js"></script>
-    <script src="js/hero-effects.js"></script>
-    <script src="js/mobile-menu.js"></script>
-    <script src="js/scroll-to-top.js"></script>
-    <script src="js/app-optimized.js"></script>
+    <script src="js/animations-optimized.js" defer></script>
+    <script src="js/hero-effects.js" defer></script>
+    <script src="js/mobile-menu.js" defer></script>
+    <script src="js/scroll-to-top.js" defer></script>
+    <script src="js/app-optimized.js" defer></script>
 
     <!-- Initialize Lucide Icons -->
     <script>
-        lucide.createIcons();
+        window.addEventListener('DOMContentLoaded', () => { if (window.lucide) lucide.createIcons(); });
 
         // Force avatar visibility on mobile (desktop uses JS animation)
         window.addEventListener('DOMContentLoaded', function () {

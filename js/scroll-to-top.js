@@ -8,14 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!scrollToTopBtn) return;
 
-    // Show/hide button based on scroll position
+    // Show/hide button based on scroll position (passive + rAF throttled)
+    let stBtnTicking = false;
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.classList.add('visible');
-        } else {
-            scrollToTopBtn.classList.remove('visible');
-        }
-    });
+        if (stBtnTicking) return;
+        stBtnTicking = true;
+        requestAnimationFrame(() => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+            stBtnTicking = false;
+        });
+    }, { passive: true });
 
     // Smooth scroll to top with animation
     scrollToTopBtn.addEventListener('click', () => {

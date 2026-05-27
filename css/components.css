@@ -32,6 +32,10 @@
     opacity: 0.4;
     z-index: var(--z-background);
     animation: float 15s ease-in-out infinite;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    contain: layout paint;
 }
 
 .orb-1 {
@@ -475,6 +479,7 @@ section {
 
 /* ========== SCROLL INDICATOR ========== */
 .scroll-indicator {
+    display: none !important;
     position: absolute;
     bottom: 2rem;
     left: 50%;
