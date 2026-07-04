@@ -9,18 +9,34 @@
     <meta name="keywords"
         content="Full Stack Developer, iOS Developer, Apple Developer, Swift, SwiftUI, Angular, Spring Boot, Python, Portfolio">
     <meta name="author" content="Daniel Benito Diaz">
+    <link rel="canonical" href="https://idanidev.github.io/idanidev-portfolio/">
+    <meta name="theme-color" content="#0a0a15">
+    <meta name="robots" content="index, follow">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Daniel Benito Diaz | Full Stack & Apple Developer">
     <meta property="og:description"
-        content="Full Stack & Apple Developer especializado en iOS, Angular, Spring Boot y Python">
+        content="Full Stack & Apple Developer especializado en iOS, Angular, Spring Boot y Python. 3 apps publicadas en el App Store.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://idanidev.github.io/idanidev-portfolio/">
+    <meta property="og:image" content="https://idanidev.github.io/idanidev-portfolio/images/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Daniel Benito Diaz | Full Stack & Apple Developer">
+    <meta name="twitter:description"
+        content="Full Stack & Apple Developer especializado en iOS, Angular, Spring Boot y Python.">
+    <meta name="twitter:image" content="https://idanidev.github.io/idanidev-portfolio/images/og-cover.jpg">
 
     <title>Daniel Benito Diaz | Full Stack & Apple Developer</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>&#x1F4BB;</text></svg>">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +46,27 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
         rel="stylesheet">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Daniel Benito Díaz",
+        "url": "https://idanidev.github.io/idanidev-portfolio/",
+        "image": "https://idanidev.github.io/idanidev-portfolio/images/idanidev-avatar.jpg",
+        "jobTitle": "Full Stack Developer & Apple Developer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Grupo Armas Trasmediterránea"
+        },
+        "sameAs": [
+            "https://github.com/idanidev",
+            "https://linkedin.com/in/iDanielBenito"
+        ],
+        "knowsAbout": ["Swift", "SwiftUI", "Angular", "Spring Boot", "Python", "TypeScript", "iOS Development"]
+    }
+    </script>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/variables.css">
@@ -69,10 +106,11 @@
     <nav>
         <div class="logo">&lt; iDaniDev /&gt;</div>
         <ul class="nav-links">
-            <li><a href="#about">Sobre mi</a></li>
+            <li><a href="#about">Sobre mí</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Proyectos</a></li>
             <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#certifications">Certificaciones</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
     </nav>
@@ -111,7 +149,7 @@
                 <div class="stats-bar">
                     <div class="stat">
                         <div class="stat-number">4+</div>
-                        <div class="stat-label">Anos experiencia</div>
+                        <div class="stat-label">Años experiencia</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">15+</div>
@@ -122,7 +160,7 @@
                         <div class="stat-label">Empresas</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">2</div>
+                        <div class="stat-number">3</div>
                         <div class="stat-label">Apps en App Store</div>
                     </div>
                 </div>
@@ -141,7 +179,7 @@
     <section id="skills">
         <div class="section-header reveal">
             <div class="section-tag">// Mis habilidades</div>
-            <h2 class="section-title">Stack Tecnologico</h2>
+            <h2 class="section-title">Stack Tecnológico</h2>
         </div>
         <div class="skills-grid">
             <div class="skill-card" data-accent="cyan">
@@ -149,7 +187,7 @@
                     <i data-lucide="smartphone" style="width: 32px; height: 32px;"></i>
                 </div>
                 <h3>iOS / Apple Developer</h3>
-                <p>Apps nativas para el ecosistema Apple con publicacion en App Store y Apple Watch.</p>
+                <p>Apps nativas para el ecosistema Apple con publicación en App Store y Apple Watch.</p>
                 <div class="skill-tags">
                     <span class="skill-tag">Swift</span>
                     <span class="skill-tag">SwiftUI</span>
@@ -178,7 +216,7 @@
                     <i data-lucide="server" style="width: 32px; height: 32px;"></i>
                 </div>
                 <h3>Backend</h3>
-                <p>APIs robustas y microservicios escalables con las mejores practicas de la industria.</p>
+                <p>APIs robustas y microservicios escalables con las mejores prácticas de la industria.</p>
                 <div class="skill-tags">
                     <span class="skill-tag">Spring Boot</span>
                     <span class="skill-tag">Java</span>
@@ -192,7 +230,7 @@
                     <i data-lucide="database" style="width: 32px; height: 32px;"></i>
                 </div>
                 <h3>Bases de Datos</h3>
-                <p>Diseno y optimizacion de esquemas para aplicaciones de alto rendimiento.</p>
+                <p>Diseño y optimización de esquemas para aplicaciones de alto rendimiento.</p>
                 <div class="skill-tags">
                     <span class="skill-tag">SQL</span>
                     <span class="skill-tag">Oracle</span>
@@ -219,7 +257,7 @@
                     <i data-lucide="sparkles" style="width: 32px; height: 32px;"></i>
                 </div>
                 <h3>AI & Herramientas</h3>
-                <p>Integracion de IA en flujos de trabajo y desarrollo asistido con herramientas modernas.</p>
+                <p>Integración de IA en flujos de trabajo y desarrollo asistido con herramientas modernas.</p>
                 <div class="skill-tags">
                     <span class="skill-tag">Claude Code</span>
                     <span class="skill-tag">Cursor</span>
@@ -255,7 +293,7 @@
                 <div class="project-type">iOS App - Publicada en App Store</div>
                 <h3>All1Fit</h3>
                 <p>App de fitness completa publicada en el App Store. Tracking de RM para CrossFit, entrenamientos
-                    hibridos, temporizador Tabata con Live Activities, integracion con HealthKit y Apple Watch companion
+                    híbridos, temporizador Tabata con Live Activities, integracion con HealthKit y Apple Watch companion
                     app. La app definitiva para atletas.</p>
                 <div class="project-tech">
                     <span>Swift</span>
@@ -269,7 +307,7 @@
                     <a href="https://github.com/idanidev/All1Fit_iOS" target="_blank" rel="noopener noreferrer"
                         class="project-link">
                         <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
-                        Ver codigo
+                        Ver código
                     </a>
                 </div>
             </div>
@@ -284,13 +322,16 @@
                         <img loading="lazy" decoding="async" src="images/clarity-screenshot.jpg" alt="Clarity App Screenshot" class="phone-screen-img">
                     </div>
                     <img loading="lazy" decoding="async" src="images/clarity-icon.png" alt="Clarity Icon" class="floating-icon">
-                    <div class="project-badge badge-dev">En Desarrollo</div>
+                    <div class="project-badge badge-appstore">
+                        <i data-lucide="download" style="width: 12px; height: 12px;"></i>
+                        App Store
+                    </div>
                 </div>
                 <div class="project-info">
-                    <div class="project-type">iOS App Nativa</div>
+                    <div class="project-type">iOS App - Publicada en App Store</div>
                     <h3>Clarity</h3>
                     <p>App de control de gastos personales con graficas detalladas, categorias inteligentes y
-                        sincronizacion con Firebase. Diseno minimalista centrado en la claridad de los datos.</p>
+                        sincronización con Firebase. Diseño minimalista centrado en la claridad de los datos.</p>
                     <div class="project-tech">
                         <span>Swift</span>
                         <span>SwiftUI</span>
@@ -301,7 +342,7 @@
                         <a href="https://github.com/idanidev/Clarity" target="_blank" rel="noopener noreferrer"
                             class="project-link">
                             <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
-                            Ver codigo
+                            Ver código
                         </a>
                     </div>
                 </div>
@@ -323,7 +364,7 @@
                 <div class="project-info">
                     <div class="project-type">iOS App - Publicada en App Store</div>
                     <h3>iTurn</h3>
-                    <p>App iOS para importar tu calendario laboral desde PDF y consultarlo en tu iPhone. Pago unico, sin suscripciones. Deteccion automatica de turnos y sincronizacion con el calendario nativo.</p>
+                    <p>App iOS para importar tu calendario laboral desde PDF y consultarlo en tu iPhone. Pago unico, sin suscripciones. Detección automática de turnos y sincronización con el calendario nativo.</p>
                     <div class="project-tech">
                         <span>Swift</span>
                         <span>SwiftUI</span>
@@ -361,7 +402,7 @@
                         <a href="https://github.com/idanidev/RepoMind" target="_blank" rel="noopener noreferrer"
                             class="project-link">
                             <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
-                            Ver codigo
+                            Ver código
                         </a>
                     </div>
                 </div>
@@ -376,8 +417,8 @@
                 <div class="project-info">
                     <div class="project-type">iOS App Nativa</div>
                     <h3>RentalMngr</h3>
-                    <p>Sistema completo y profesional para gestionar propiedades de alquiler, habitaciones, inquilinos y
-                        finanzas desde iOS. Control total de tu cartera inmobiliaria.</p>
+                    <p>Sistema completo para gestionar propiedades de alquiler, habitaciones, inquilinos, contratos y finanzas.
+                        App iOS nativa y webapp full-stack con panel de administracion y pagos en tiempo real.</p>
                     <div class="project-tech">
                         <span>Swift</span>
                         <span>SwiftUI</span>
@@ -388,7 +429,12 @@
                         <a href="https://github.com/idanidev/RentalMngr-iOS" target="_blank"
                             rel="noopener noreferrer" class="project-link">
                             <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
-                            Ver codigo
+                            iOS
+                        </a>
+                        <a href="https://github.com/idanidev/rental-manager" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
+                            Web
                         </a>
                     </div>
                 </div>
@@ -411,9 +457,9 @@
                     <div class="project-badge badge-new">Nuevo</div>
                 </div>
                 <div class="project-info">
-                    <div class="project-type">Web App - Produccion</div>
+                    <div class="project-type">Web App - Producción</div>
                     <h3>Brahma Sant Pere Pescador</h3>
-                    <p>Web profesional para criadero de gallinas Brahma ornamentales. Catalogo de variedades, galeria, mapa interactivo con Leaflet y diseno responsive con animaciones fluidas.</p>
+                    <p>Web profesional para criadero de gallinas Brahma ornamentales. Catalogo de variedades, galería, mapa interactivo con Leaflet y diseño responsive con animaciones fluidas.</p>
                     <div class="project-tech">
                         <span>Next.js 16</span>
                         <span>React 19</span>
@@ -426,139 +472,6 @@
                             class="project-link">
                             <i data-lucide="external-link" style="width: 18px; height: 18px;"></i>
                             Ver web
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- HomeMate -->
-            <div class="project-card">
-                <div class="project-visual">
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen screen-homemate">
-                            <div class="screen-header-bar">
-                                <span class="screen-title">HomeMate</span>
-                                <span class="screen-icon-small">
-                                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="3">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                    </svg>
-                                </span>
-                            </div>
-                            <div class="screen-card-mini">
-                                <div class="screen-check done"></div>
-                                <div class="screen-line" style="width: 65%; flex: none;"></div>
-                            </div>
-                            <div class="screen-card-mini">
-                                <div class="screen-check"></div>
-                                <div class="screen-line" style="width: 55%; flex: none;"></div>
-                            </div>
-                            <div class="screen-card-mini">
-                                <div class="screen-check done"></div>
-                                <div class="screen-line" style="width: 70%; flex: none;"></div>
-                            </div>
-                            <div class="screen-card-mini">
-                                <div class="screen-check"></div>
-                                <div class="screen-line" style="width: 50%; flex: none;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-badge badge-new">Nuevo</div>
-                </div>
-                <div class="project-info">
-                    <div class="project-type">iOS App Nativa</div>
-                    <h3>HomeMate</h3>
-                    <p>App de gestion del hogar con listas de tareas domesticas, listas de compra y organizacion del
-                        hogar. Interfaz limpia y notificaciones inteligentes para no olvidar nada.</p>
-                    <div class="project-tech">
-                        <span>Swift</span>
-                        <span>SwiftUI</span>
-                        <span>Notifications</span>
-                        <span>SwiftData</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/idanidev/HomeMate" target="_blank" rel="noopener noreferrer"
-                            class="project-link">
-                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
-                            Ver codigo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Rental Manager Web -->
-            <div class="project-card">
-                <div class="project-visual">
-                    <div class="project-mockup">
-                        <div class="mockup-header">
-                            <div class="mockup-dot"></div>
-                            <div class="mockup-dot"></div>
-                            <div class="mockup-dot"></div>
-                        </div>
-                        <div class="mockup-content">
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                            <div class="mockup-line"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="project-type">Full Stack App</div>
-                    <h3>Rental Manager</h3>
-                    <p>WebApp completa para gestionar habitaciones, contratos y fianzas de pisos de alquiler. Panel de
-                        administracion con seguimiento de pagos en tiempo real.</p>
-                    <div class="project-tech">
-                        <span>Svelte</span>
-                        <span>SvelteKit</span>
-                        <span>Supabase</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/idanidev/rental-manager" target="_blank"
-                            rel="noopener noreferrer" class="project-link">
-                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
-                            Ver codigo
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- iOS Focus Reminder -->
-            <div class="project-card">
-                <div class="project-visual">
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <div class="phone-screen screen-focus">
-                            <div class="screen-header-bar">
-                                <span class="screen-title">Focus</span>
-                            </div>
-                            <div class="screen-timer">
-                                <div class="timer-ring"></div>
-                                <span class="timer-text">25:00</span>
-                            </div>
-                            <div class="screen-card-mini" style="justify-content: center;">
-                                <div class="screen-line" style="width: 40%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <div class="project-type">iOS App Nativa</div>
-                    <h3>Focus Reminder</h3>
-                    <p>Aplicacion nativa para iOS que ayuda a mantener la concentracion mediante recordatorios
-                        inteligentes y tecnicas de productividad como Pomodoro.</p>
-                    <div class="project-tech">
-                        <span>Swift</span>
-                        <span>SwiftUI</span>
-                        <span>Notifications</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/idanidev/IOsFocusReminder" target="_blank"
-                            rel="noopener noreferrer" class="project-link">
-                            <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
-                            Ver codigo
                         </a>
                     </div>
                 </div>
@@ -601,7 +514,7 @@
                 <div class="project-info">
                     <div class="project-type">App Multiplataforma</div>
                     <h3>InSync</h3>
-                    <p>App de sincronizacion de calendarios para iOS y Android. Comparte horarios con tu pareja, amigos o companeros. Backend con Supabase y widgets nativos en ambas plataformas.</p>
+                    <p>App de sincronización de calendarios para iOS y Android. Comparte horarios con tu pareja, amigos o compañeros. Backend con Supabase y widgets nativos en ambas plataformas.</p>
                     <div class="project-tech">
                         <span>Swift</span>
                         <span>Kotlin</span>
@@ -613,7 +526,7 @@
                         <a href="https://github.com/idanidev/InSync" target="_blank" rel="noopener noreferrer"
                             class="project-link">
                             <svg width="18" height="18" fill="currentColor"><use href="#icon-github"/></svg>
-                            Ver codigo
+                            Ver código
                         </a>
                     </div>
                 </div>
@@ -635,9 +548,9 @@
                     <h3>Full Stack Developer</h3>
                     <div class="timeline-company">Naviera Armas</div>
                     <ul>
-                        <li>Migracion de Angular v10 a v16 con creacion de librerias propias</li>
+                        <li>Migración de Angular v10 a v16 con creacion de librerias propias</li>
                         <li>Desarrollo de microservicio de parcelas de puertos</li>
-                        <li>Implementacion de arquitectura modular y escalable</li>
+                        <li>Implementación de arquitectura modular y escalable</li>
                     </ul>
                 </div>
             </div>
@@ -649,8 +562,8 @@
                     <div class="timeline-company">Minsait</div>
                     <ul>
                         <li>Desarrollo con Angular, PrimeNG y Spring Boot</li>
-                        <li>Gestion de bases de datos con SQL Developer y Oracle</li>
-                        <li>Implementacion de interfaces responsive con TypeScript</li>
+                        <li>Gestión de bases de datos con SQL Developer y Oracle</li>
+                        <li>Implementación de interfaces responsive con TypeScript</li>
                     </ul>
                 </div>
             </div>
@@ -662,8 +575,8 @@
                     <div class="timeline-company">NTT Data</div>
                     <ul>
                         <li>Desarrollo en plataforma Salesforce</li>
-                        <li>Implementacion de soluciones con Vlocity y OmniStudio</li>
-                        <li>Configuracion de flujos de trabajo automatizados</li>
+                        <li>Implementación de soluciones con Vlocity y OmniStudio</li>
+                        <li>Configuración de flujos de trabajo automatizados</li>
                     </ul>
                 </div>
             </div>
@@ -675,9 +588,38 @@
                     <div class="timeline-company">Octupus Technologies</div>
                     <ul>
                         <li>Desarrollo de modulos en Odoo</li>
-                        <li>Automatizacion de procesos con Python</li>
-                        <li>Integracion de sistemas empresariales</li>
+                        <li>Automatización de procesos con Python</li>
+                        <li>Integración de sistemas empresariales</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="section-header reveal">
+            <div class="section-tag">// Formación continua</div>
+            <h2 class="section-title">Certificaciones</h2>
+        </div>
+        <div class="certs-grid reveal">
+            <div class="cert-card">
+                <div class="cert-logo">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true">
+                        <path d="M12 2L2 22h4.2l1.6-3.6h8.4L17.8 22H22L12 2zm-2.6 12.4L12 8.5l2.6 5.9H9.4z"/>
+                    </svg>
+                </div>
+                <div class="cert-info">
+                    <div class="cert-issuer">Anthropic</div>
+                    <h3 class="cert-name">Claude Code in Action</h3>
+                    <div class="cert-date">26 enero 2026 · ID: 5h86ub6cbtf8</div>
+                    <p class="cert-desc">Curso oficial de Anthropic sobre uso avanzado de Claude Code: workflows
+                        agénticos, hooks, MCP, sub-agents y automatización de tareas de ingeniería.</p>
+                    <a href="https://verify.skilljar.com/c/5h86ub6cbtf8" target="_blank" rel="noopener noreferrer"
+                        class="cert-link">
+                        <i data-lucide="external-link" style="width: 14px; height: 14px;"></i>
+                        Verificar certificado
+                    </a>
                 </div>
             </div>
         </div>

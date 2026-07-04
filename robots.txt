@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://idanidev.github.io/idanidev-portfolio/sitemap.xml
