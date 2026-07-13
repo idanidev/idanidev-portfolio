@@ -483,3 +483,17 @@ footer p {
     background: rgba(0, 212, 255, 0.08);
     border-color: var(--accent-cyan);
 }
+
+.cert-logo--edu {
+    background: linear-gradient(135deg, #00d4ff, #4a9eff);
+    color: #0a0e1a;
+}
+
+.languages-note {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}

@@ -392,13 +392,19 @@ document.addEventListener("DOMContentLoaded", () => {
   new OptimizedAnimations();
 
   // Fallback: ensure all elements become visible after page load
-  // This catches any elements that may have been missed by IntersectionObserver
+  // Covers IntersectionObserver misses AND anime.js failing to run
+  // (CDN blocked, rAF throttled) — hero included so text never stays hidden
   setTimeout(() => {
-    document.querySelectorAll('.skill-card, .project-card, .timeline-content, .timeline-dot').forEach(el => {
+    document.querySelectorAll(
+      '.skill-card, .project-card, .timeline-content, .timeline-dot, ' +
+      '.hero h1, .hero h1 .word, .hero-tag, .hero-description, .hero-cta .btn, ' +
+      '.hero-avatar-img, .reveal, .cert-card'
+    ).forEach(el => {
       const style = getComputedStyle(el);
       if (style.opacity === '0') {
         el.style.opacity = '1';
         el.style.transform = 'none';
+        el.style.filter = 'none';
       }
     });
   }, 3000);
