@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InSync · The calendar for both of you</title>
+<meta name="description" content="Work shifts, plans, the shopping and your trips in one shared place. What one of you writes down, the other sees straight away. iPhone and Android.">
+<link rel="alternate" hreflang="es" href="https://idanidev-portfolio.vercel.app/insync/">
+<link rel="alternate" hreflang="en" href="https://idanidev-portfolio.vercel.app/insync/en/">
+<link rel="canonical" href="https://idanidev-portfolio.vercel.app/insync/en/">
+
+<!-- Open Graph: el código de invitación se comparte por WhatsApp, y quien lo recibe
+     tiene que entender qué es ANTES de instalar nada. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="InSync · The calendar for both of you">
+<meta property="og:description" content="Work shifts, plans, the shopping and your trips in one shared place. What one of you writes down, the other sees straight away.">
+<meta property="og:url" content="https://idanidev-portfolio.vercel.app/insync/en/">
+<meta property="og:image" content="https://idanidev-portfolio.vercel.app/insync/icono.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+
+<style>
+  :root {
+    --tinta: #16191c; --tinta-2: #4a5157; --fondo: #ffffff;
+    --linea: #e3e6e8; --acento: #1d5f6b; --suave: #f5f7f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --tinta: #e8eced; --tinta-2: #a9b3b6; --fondo: #14181a;
+            --linea: #2a3134; --acento: #6fc3d2; --suave: #1b2023; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--fondo); color: var(--tinta);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 48rem; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+  .hero { text-align: center; margin-bottom: 3.5rem; }
+  .icono {
+    width: 88px; height: 88px; border-radius: 20px; margin: 0 auto 1.5rem;
+    display: block; box-shadow: 0 2px 14px rgba(0,0,0,.12);
+  }
+  h1 { font-size: 2.3rem; line-height: 1.15; margin: 0 0 .75rem; letter-spacing: -.025em; }
+  .entradilla { font-size: 1.15rem; color: var(--tinta-2); margin: 0 auto; max-width: 34rem; }
+  .plataformas {
+    margin-top: 1.75rem; font-size: .9rem; color: var(--tinta-2);
+    display: inline-block; padding: .5rem 1rem; border: 1px solid var(--linea);
+    border-radius: 999px;
+  }
+  h2 {
+    font-size: 1.15rem; margin: 3rem 0 .75rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--linea); letter-spacing: -.01em;
+  }
+  p, li { color: var(--tinta-2); }
+  p { margin: 0 0 1rem; }
+  strong { color: var(--tinta); font-weight: 600; }
+  a { color: var(--acento); }
+  a:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+
+  .rejilla {
+    display: grid; gap: 1px; background: var(--linea);
+    border: 1px solid var(--linea); border-radius: 12px; overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    margin: 1.5rem 0;
+  }
+  .celda { background: var(--fondo); padding: 1.25rem 1.35rem; }
+  .celda h3 { font-size: 1rem; margin: 0 0 .35rem; color: var(--tinta); letter-spacing: -.005em; }
+  .celda p { margin: 0; font-size: .93rem; }
+
+  .aviso {
+    background: var(--suave); border: 1px solid var(--linea); border-radius: 12px;
+    padding: 1.25rem 1.35rem; margin: 1.5rem 0;
+  }
+  .aviso p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--linea);
+    font-size: .85rem; color: var(--tinta-2); text-align: center;
+  }
+  footer a { margin: 0 .5rem; }
+</style>
+</head>
+<body>
+<main>
+
+  <div class="hero">
+    <img class="icono" src="../icono.png" alt="" width="88" height="88">
+    <h1>The calendar for both of you</h1>
+    <p class="entradilla">One person's work shifts, the other's plans, the shopping, the
+    errands and the summer trip. In one place, and the same on both phones.</p>
+    <p class="plataformas">iPhone and Android — because if only one of you can install it, it is no use</p>
+  </div>
+
+  <h2>Not just another calendar</h2>
+  <p>An ordinary shared calendar lets you write down events. Google already does that.
+  The problem for a couple is not the events: it is that the logistics live in five
+  different places — the work calendar, the shopping note, the chat thread with the
+  links for the trip, and whatever one of you remembers to tell the other.</p>
+  <p>InSync puts all of it on the same screen.</p>
+
+  <div class="rejilla">
+    <div class="celda">
+      <h3>Work shifts</h3>
+      <p>Rotating ones included: set the pattern once and the month fills itself in,
+      with exceptions when you swap a shift.</p>
+    </div>
+    <div class="celda">
+      <h3>Shopping and errands</h3>
+      <p>The list sorted by shop and the chores at home, shared. What one of you ticks
+      off, the other sees.</p>
+    </div>
+    <div class="celda">
+      <h3>Trips with an itinerary</h3>
+      <p>Day by day, with journeys, bookings and whatever files you want to hand.</p>
+    </div>
+    <div class="celda">
+      <h3>Notes with checklists</h3>
+      <p>For the things that are not events but must not be forgotten either.</p>
+    </div>
+    <div class="celda">
+      <h3>Widget and Siri</h3>
+      <p>Your day at a glance on the home screen, and events created by voice.</p>
+    </div>
+    <div class="celda">
+      <h3>Works with no signal</h3>
+      <p>Everything is kept on the phone. When the network comes back, it catches up on its own.</p>
+    </div>
+  </div>
+
+  <h2>What it does not do</h2>
+  <p>No ads, your data is not sold, and it never asks for your location. If you attach a
+  photo to a trip, the coordinates are stripped out before it is uploaded. What it collects
+  and what it does not is written out in full in the
+  <a href="../privacidad.html">privacy policy</a>, with no small print.</p>
+
+  <div class="aviso">
+    <p><strong>Not published yet.</strong> InSync is finishing App Store review. The
+    download link will appear here once it is available.</p>
+    <p>If you would like me to let you know:
+    <a href="mailto:idanideveloper@gmail.com?subject=Let%20me%20know%20when%20InSync%20is%20out">idanideveloper@gmail.com</a>.</p>
+  </div>
+
+  <footer>
+    <a href="../privacidad.html">Privacy</a>·<a href="../soporte.html">Support</a>·<a href="mailto:idanideveloper@gmail.com">Contact</a>
+    <p style="margin-top:1rem">Made by Daniel Benito.</p>
+  </footer>
+
+</main>
+</body>
+</html>
