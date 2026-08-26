@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RentalMngr · Alquiler por habitaciones</title>
+<meta name="description" content="App para llevar el alquiler de un piso por habitaciones o de una casa entera: inquilinos, cobros, gastos y contratos en PDF.">
+<style>
+  :root {
+    --tinta: #16191c; --tinta-2: #4a5157; --fondo: #ffffff;
+    --linea: #e3e6e8; --acento: #1d5f6b; --suave: #f4f6f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --tinta: #e8eced; --tinta-2: #a9b3b6; --fondo: #14181a; --linea: #2a3134; --acento: #6fc3d2; --suave: #1a1f22; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--fondo); color: var(--tinta);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 4rem 1.5rem 6rem; }
+  h1 { font-size: 2.2rem; line-height: 1.15; margin: 0 0 .75rem; letter-spacing: -.025em; }
+  .lede { font-size: 1.1rem; color: var(--tinta-2); margin: 0 0 2.5rem; max-width: 32rem; }
+  h2 {
+    font-size: 1.15rem; margin: 2.75rem 0 .75rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--linea); letter-spacing: -.01em;
+  }
+  p, li { color: var(--tinta-2); }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+  li { margin-bottom: .45rem; }
+  strong { color: var(--tinta); font-weight: 600; }
+  a { color: var(--acento); }
+  a:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+  .plan {
+    background: var(--suave); border: 1px solid var(--linea); border-radius: 8px;
+    padding: 1.1rem 1.3rem; margin: 1rem 0;
+  }
+  .plan p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--linea);
+    font-size: .85rem; color: var(--tinta-2);
+    display: flex; flex-wrap: wrap; gap: 1rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>RentalMngr</h1>
+  <p class="lede">Para quien alquila por habitaciones y acaba llevando las cuentas en
+  una hoja de cálculo y los contratos en el correo.</p>
+
+  <h2>Por habitación, no por piso</h2>
+  <p>Cada habitación con su inquilino, su renta y su estado: ocupada o libre. Las zonas
+  comunes van aparte, y cada habitación guarda sus fotos y su inventario.</p>
+  <p>Si alquilas la casa entera con un solo contrato, la marcas como tal y la app deja
+  de hablarte de habitaciones.</p>
+
+  <h2>El papeleo</h2>
+  <ul>
+    <li>Contrato en PDF con tus propias cláusulas y tus variables: renta, fianza, fechas</li>
+    <li>Anuncio de la habitación libre en PDF, con fotos y tus datos de contacto</li>
+    <li>Informe anual por propiedad: cobrado, pendiente, gastos y neto</li>
+    <li>Documentos guardados por propiedad e inquilino</li>
+  </ul>
+
+  <h2>Cobros y gastos</h2>
+  <p>La renta de cada habitación, marcada como cobrada o pendiente. Luz, agua y gas, o
+  una cuota fija de gastos comunes con lo que incluye. Y avisos de fin de contrato con
+  los días de antelación que tú elijas.</p>
+
+  <h2>En iPhone, iPad y Mac</h2>
+  <p>Sincronizado al momento. Puedes compartir una propiedad con tu pareja, tu socio o
+  tu gestor, con permiso de edición o de solo lectura.</p>
+
+  <h2>Precio</h2>
+  <div class="plan">
+    <p><strong>Gratis:</strong> hasta 3 unidades. Una unidad es una habitación que
+    alquilas, o una casa entera si la alquilas completa.</p>
+    <p><strong>Premium:</strong> sin límite de unidades ni de documentos, e historial
+    completo de ingresos y gastos.</p>
+  </div>
+
+  <footer>
+    <a href="soporte.html">Soporte</a>
+    <a href="privacidad.html">Privacidad</a>
+    <a href="mailto:idanideveloper@gmail.com">idanideveloper@gmail.com</a>
+  </footer>
+</main>
+</body>
+</html>
