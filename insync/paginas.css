@@ -1,0 +1,55 @@
+/* Estilo de las páginas de texto de la web de InSync (privacidad, aviso legal, soporte,
+   novedades). Los mismos colores y letras que la portada, que lleva los suyos dentro. */
+:root {
+  --tinta: #0f2328; --tinta-2: #4b5c61; --fondo: #ffffff; --papel: #f2f6f7;
+  --linea: #dce4e6; --teal: #0e6b7d; --sobre-teal: #ffffff; --oro: #8a5f32;
+  --display: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --texto: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tinta: #e9f0f1; --tinta-2: #a3b3b7; --fondo: #0d1517; --papel: #132024;
+    --linea: #24363b; --teal: #5cc8dc; --sobre-teal: #0b1416; --oro: #e8c77e;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--fondo); color: var(--tinta); font: 17px/1.65 var(--texto);
+       -webkit-font-smoothing: antialiased; }
+a { color: var(--teal); }
+a:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 6px; }
+.envoltura { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
+
+.barra { display: flex; align-items: center; justify-content: space-between; padding-block: 1rem; }
+.marca { display: flex; align-items: center; gap: .6rem; color: var(--tinta); text-decoration: none;
+         font: 700 1.1rem/1 var(--display); }
+.marca img { width: 32px; height: 32px; border-radius: 8px; }
+.barra-descarga { font: 600 .95rem/1 var(--texto); text-decoration: none; padding: .65rem 1rem;
+                  border-radius: 999px; border: 1.5px solid var(--linea); color: var(--tinta); }
+
+main { padding-block: 2rem 4rem; }
+h1 { margin: 0 0 .5rem; font: 800 clamp(2rem, 6vw, 2.8rem)/1.08 var(--display); letter-spacing: -.03em; }
+.entradilla { margin: 0 0 1rem; font-size: 1.1rem; }
+.fecha { margin: 0 0 2rem; font: 500 .85rem/1.4 var(--mono); color: var(--tinta-2); }
+h2 { margin: 2.75rem 0 .75rem; padding-top: 1.5rem; border-top: 1px solid var(--linea);
+     font: 760 1.45rem/1.2 var(--display); letter-spacing: -.015em; }
+h3 { margin: 1.75rem 0 .5rem; font: 700 1.1rem/1.3 var(--display); }
+p, li, td { color: var(--tinta-2); }
+strong { color: var(--tinta); font-weight: 650; }
+ul, ol { padding-left: 1.25rem; }
+li { margin-bottom: .45rem; }
+.resumen { background: var(--papel); border-radius: 20px; padding: 1.25rem 1.4rem; margin: 0 0 1rem; }
+.resumen ul { margin: 0; }
+.resumen li { color: var(--tinta); }
+table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+th, td { text-align: left; vertical-align: top; padding: .65rem .5rem; border-bottom: 1px solid var(--linea); }
+th { font: 650 .8rem/1.3 var(--texto); color: var(--tinta); text-transform: none; }
+.tabla { overflow-x: auto; }
+.pendiente { background: #ffe9a8; color: #5a3d00; padding: 0 .25rem; border-radius: 4px; font-weight: 650; }
+
+footer { border-top: 1px solid var(--linea); padding-block: 2rem 3rem; font-size: .9rem;
+         color: var(--tinta-2); text-align: center; }
+footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.25rem; margin-bottom: .9rem; }
+h2 + .fecha { margin: -.35rem 0 .75rem; }
