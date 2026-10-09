@@ -2,148 +2,595 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>InSync · Calendario de turnos en pareja</title>
-<meta name="description" content="Turnos, planes, la compra y los viajes en un solo sitio compartido. Lo que apunta uno, lo ve el otro al instante. iPhone y Android.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Smart App Banner: en Safari del iPhone ofrece abrir o instalar la app. -->
+<meta name="apple-itunes-app" content="app-id=6798864347">
+<title>Calendario de turnos para iPhone, solo o en pareja · InSync</title>
+<meta name="description" content="Tu cuadrante de turnos en el iPhone: rotativos, noches y guardias, de un vistazo y en el widget. Si tu pareja trabaja a turnos, veis qué días libráis juntos. Gratis y sin anuncios.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="Daniel Benito">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1517" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://idanidev-portfolio.vercel.app/insync/">
 <link rel="alternate" hreflang="es" href="https://idanidev-portfolio.vercel.app/insync/">
 <link rel="alternate" hreflang="en" href="https://idanidev-portfolio.vercel.app/insync/en/">
-<link rel="canonical" href="https://idanidev-portfolio.vercel.app/insync/">
+<link rel="alternate" hreflang="x-default" href="https://idanidev-portfolio.vercel.app/insync/">
+<link rel="icon" type="image/png" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
 
-<!-- Open Graph: el código de invitación se comparte por WhatsApp, y quien lo recibe
-     tiene que entender qué es ANTES de instalar nada. -->
+<!-- Open Graph y Twitter: la web se comparte por WhatsApp, y quien la recibe tiene que entender
+     qué es antes de instalar nada. La imagen (1200×630) sale de las capturas y del icono. -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="InSync · El calendario de los dos">
-<meta property="og:description" content="Turnos, planes, la compra y los viajes en un solo sitio compartido. Lo que apunta uno, lo ve el otro al instante.">
+<meta property="og:site_name" content="InSync">
+<meta property="og:title" content="InSync · Tus turnos, claros de un vistazo">
+<meta property="og:description" content="El calendario de turnos para iPhone, con widget. Solo o con tu pareja: veis qué días libráis juntos. Gratis y sin anuncios.">
 <meta property="og:url" content="https://idanidev-portfolio.vercel.app/insync/">
-<meta property="og:image" content="https://idanidev-portfolio.vercel.app/insync/icono.png">
+<meta property="og:image" content="https://idanidev-portfolio.vercel.app/insync/img/og-es.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="InSync: el mes con los turnos de los dos y el widget en la pantalla de inicio del iPhone.">
 <meta property="og:locale" content="es_ES">
-<meta name="twitter:card" content="summary">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="InSync · Tus turnos, claros de un vistazo">
+<meta name="twitter:description" content="El calendario de turnos para iPhone, con widget. Solo o con tu pareja. Gratis y sin anuncios.">
+<meta name="twitter:image" content="https://idanidev-portfolio.vercel.app/insync/img/og-es.jpg">
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://idanidev-portfolio.vercel.app/insync/#web",
+      "url": "https://idanidev-portfolio.vercel.app/insync/",
+      "name": "InSync",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://idanidev-portfolio.vercel.app/insync/#titular" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://idanidev-portfolio.vercel.app/insync/#titular",
+      "name": "Daniel Benito",
+      "url": "https://idanidev-portfolio.vercel.app/insync/aviso-legal.html"
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://idanidev-portfolio.vercel.app/insync/#app",
+      "name": "InSync: Turnos en Pareja",
+      "alternateName": "InSync",
+      "operatingSystem": "iOS 17 o posterior",
+      "applicationCategory": "ProductivityApplication",
+      "inLanguage": ["es", "en"],
+      "description": "Calendario de turnos para iPhone. Metes tu cuadrante una vez (rotativos, noches, guardias) y el mes se rellena solo, con widget en la pantalla de inicio. Si tu pareja también trabaja a turnos, los dos veis quién trabaja, quién libra y qué días libráis juntos.",
+      "url": "https://idanidev-portfolio.vercel.app/insync/",
+      "downloadUrl": "https://apps.apple.com/app/id6798864347",
+      "image": "https://idanidev-portfolio.vercel.app/insync/icono.png",
+      "screenshot": [
+        "https://idanidev-portfolio.vercel.app/insync/img/mes-es.webp",
+        "https://idanidev-portfolio.vercel.app/insync/img/widget-es.webp",
+        "https://idanidev-portfolio.vercel.app/insync/img/compra-es.webp"
+      ],
+      "author": { "@id": "https://idanidev-portfolio.vercel.app/insync/#titular" },
+      "offers": [
+        { "@type": "Offer", "name": "Gratis", "price": "0", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "InSync Pro mensual", "price": "2.99", "priceCurrency": "EUR" },
+        { "@type": "Offer", "name": "InSync Pro anual, con un mes de prueba gratis", "price": "24.99", "priceCurrency": "EUR" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Mi pareja ve mis turnos gratis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Ver los turnos del otro, el calendario compartido, la compra y los recados son gratis. InSync Pro es opcional." } },
+        { "@type": "Question", "name": "¿Y si mi pareja tiene Android?",
+          "acceptedAnswer": { "@type": "Answer", "text": "De momento InSync es solo para iPhone. La versión de Android llegará más adelante." } },
+        { "@type": "Question", "name": "¿Sirve para turnos rotativos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Eliges una plantilla (5x2, 4x2, 2-2-3, mañana/tarde/noche) o haces tu ciclo, y el mes se rellena solo. Un cambio suelto es un toque." } },
+        { "@type": "Question", "name": "¿La puedo usar sin pareja?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. El calendario de turnos, las horas trabajadas, los días libres y el widget funcionan igual sin nadie más." } },
+        { "@type": "Question", "name": "¿Cuánto cuesta?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Es gratis y sin anuncios. InSync Pro es opcional: 2,99 € al mes o 24,99 € al año, el anual con un mes de prueba gratis, y lo paga una persona para todo el grupo." } },
+        { "@type": "Question", "name": "¿Qué pasa con mis datos?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No lleva anuncios, no vende tus datos y no te pide la ubicación. Si adjuntas una foto, se le quitan las coordenadas antes de subirla. Todo, sin letra pequeña, en la política de privacidad." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>document.documentElement.classList.add('js')</script>
 <style>
   :root {
-    --tinta: #16191c; --tinta-2: #4a5157; --fondo: #ffffff;
-    --linea: #e3e6e8; --acento: #1d5f6b; --suave: #f5f7f8;
+    --tinta: #0f2328; --tinta-2: #4b5c61; --fondo: #ffffff; --papel: #f2f6f7;
+    --linea: #dce4e6; --teal: #0e6b7d; --sobre-teal: #ffffff; --teal-suave: rgba(14,107,125,.09);
+    --oro: #8a5f32; --oro-fondo: #f7e9c8; --corazon: #f1d39a;
+    --m: #f5a623; --t: #4a90d9; --n: #7b5ea7; --l: #9aa5ab;
+    --sombra: 0 1px 2px rgba(15,35,40,.06), 0 12px 40px -12px rgba(15,35,40,.22);
+    --sombra-alta: 0 2px 4px rgba(15,35,40,.06), 0 22px 48px -16px rgba(15,35,40,.3);
+    --display: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --texto: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --suave: cubic-bezier(.2,.7,.2,1);
+    color-scheme: light dark;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --tinta: #e8eced; --tinta-2: #a9b3b6; --fondo: #14181a;
-            --linea: #2a3134; --acento: #6fc3d2; --suave: #1b2023; }
+    :root {
+      --tinta: #e9f0f1; --tinta-2: #a3b3b7; --fondo: #0d1517; --papel: #132024;
+      --linea: #24363b; --teal: #5cc8dc; --sobre-teal: #0b1416; --teal-suave: rgba(92,200,220,.12);
+      --oro: #e8c77e; --oro-fondo: rgba(232,199,126,.17); --corazon: rgba(232,199,126,.32);
+      --sombra: 0 1px 2px rgba(0,0,0,.4), 0 16px 48px -16px rgba(0,0,0,.7);
+      --sombra-alta: 0 2px 4px rgba(0,0,0,.45), 0 24px 56px -16px rgba(0,0,0,.8);
+    }
   }
+
   * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; }
   body {
     margin: 0; background: var(--fondo); color: var(--tinta);
-    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    -webkit-font-smoothing: antialiased;
+    font: clamp(16px, 15.2px + .25vw, 17px)/1.6 var(--texto); -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
   }
-  main { max-width: 48rem; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
-  .hero { text-align: center; margin-bottom: 3.5rem; }
-  .icono {
-    width: 88px; height: 88px; border-radius: 20px; margin: 0 auto 1.5rem;
-    display: block; box-shadow: 0 2px 14px rgba(0,0,0,.12);
+  /* Al cambiar de claro a oscuro, los colores pasan con suavidad en vez de saltar */
+  body, .cabecera, .bloque, .cuadrante, .plan, .pasos li, .oficios li, footer, summary {
+    transition: background-color .35s ease, color .35s ease, border-color .35s ease;
   }
-  h1 { font-size: 2.3rem; line-height: 1.15; margin: 0 0 .75rem; letter-spacing: -.025em; }
-  .entradilla { font-size: 1.15rem; color: var(--tinta-2); margin: 0 auto; max-width: 34rem; }
-  .plataformas {
-    margin-top: 1.75rem; font-size: .9rem; color: var(--tinta-2);
-    display: inline-block; padding: .5rem 1rem; border: 1px solid var(--linea);
-    border-radius: 999px;
-  }
-  h2 {
-    font-size: 1.15rem; margin: 3rem 0 .75rem; padding-top: 1.25rem;
-    border-top: 1px solid var(--linea); letter-spacing: -.01em;
-  }
-  p, li { color: var(--tinta-2); }
-  p { margin: 0 0 1rem; }
-  strong { color: var(--tinta); font-weight: 600; }
-  a { color: var(--acento); }
-  a:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: var(--teal); }
+  :focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 6px; }
+  .envoltura { max-width: 68rem; margin: 0 auto; padding: 0 max(1.25rem, env(safe-area-inset-left, 0px)); }
 
-  .rejilla {
-    display: grid; gap: 1px; background: var(--linea);
-    border: 1px solid var(--linea); border-radius: 12px; overflow: hidden;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    margin: 1.5rem 0;
-  }
-  .celda { background: var(--fondo); padding: 1.25rem 1.35rem; }
-  .celda h3 { font-size: 1rem; margin: 0 0 .35rem; color: var(--tinta); letter-spacing: -.005em; }
-  .celda p { margin: 0; font-size: .93rem; }
+  /* Saltar al contenido: solo se ve al llegar con el teclado */
+  .saltar { position: absolute; left: 1rem; top: -5rem; z-index: 30; padding: .8rem 1.1rem; border-radius: 12px;
+            background: var(--teal); color: var(--sobre-teal); font-weight: 650; text-decoration: none; }
+  .saltar:focus { top: calc(.75rem + env(safe-area-inset-top, 0px)); }
 
-  .aviso {
-    background: var(--suave); border: 1px solid var(--linea); border-radius: 12px;
-    padding: 1.25rem 1.35rem; margin: 1.5rem 0;
+  /* Barra de arriba, fija y translúcida */
+  .cabecera { position: sticky; top: 0; z-index: 20; padding-top: env(safe-area-inset-top, 0px);
+              background: var(--fondo); border-bottom: 1px solid transparent; }
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .cabecera { background: color-mix(in srgb, var(--fondo) 78%, transparent);
+                -webkit-backdrop-filter: saturate(1.6) blur(16px); backdrop-filter: saturate(1.6) blur(16px); }
   }
-  .aviso p:last-child { margin-bottom: 0; }
-  footer {
-    margin-top: 3.5rem; padding-top: 1.25rem; border-top: 1px solid var(--linea);
-    font-size: .85rem; color: var(--tinta-2); text-align: center;
+  .cabecera.con-borde { border-bottom-color: var(--linea); }
+  .barra { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .5rem; }
+  .marca { display: flex; align-items: center; gap: .6rem; min-height: 44px; color: var(--tinta); text-decoration: none;
+           font: 700 1.1rem/1 var(--display); letter-spacing: -.01em; }
+  .marca img { width: 32px; height: 32px; border-radius: 8px; }
+  .barra-derecha { display: flex; align-items: center; gap: .25rem; }
+  .barra-enlaces { display: none; }
+  @media (min-width: 760px) {
+    .barra-enlaces { display: flex; gap: .25rem; margin-right: .5rem; }
+    .barra-enlaces a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 .7rem; border-radius: 999px;
+                       color: var(--tinta-2); text-decoration: none; font: 550 .95rem/1 var(--texto);
+                       transition: color .2s ease, background-color .2s ease; }
+    .barra-enlaces a:hover { color: var(--tinta); background: var(--teal-suave); }
   }
-  footer a { margin: 0 .5rem; }
+  .barra-descarga { display: inline-flex; align-items: center; min-height: 44px; font: 600 .95rem/1 var(--texto);
+                    text-decoration: none; padding: 0 1.1rem; border-radius: 999px; border: 1.5px solid var(--linea);
+                    color: var(--tinta); transition: border-color .2s ease, background-color .2s ease, transform .15s ease; }
+  .barra-descarga:hover { border-color: var(--teal); background: var(--teal-suave); }
+  .barra-descarga:active { transform: scale(.97); }
+
+  /* Botón de descarga (sin el logo de Apple: sus normas no lo dejan en botones propios) */
+  .descarga {
+    display: inline-flex; align-items: center; justify-content: center; gap: .55rem; min-height: 52px;
+    padding: .85rem 1.5rem; border-radius: 999px; background: var(--teal); color: var(--sobre-teal);
+    font: 650 1.05rem/1.2 var(--texto); text-decoration: none; text-align: center;
+    box-shadow: 0 6px 18px -10px var(--teal);
+    transition: transform .2s var(--suave), box-shadow .2s var(--suave), filter .2s ease;
+  }
+  .descarga:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -12px var(--teal); filter: brightness(1.06); }
+  .descarga:active { transform: translateY(0) scale(.97); box-shadow: 0 4px 12px -8px var(--teal); }
+  .descarga svg { width: 18px; height: 18px; flex: none; transition: transform .25s var(--suave); }
+  .descarga:hover svg { transform: translateY(2px); }
+  .nota { margin: .9rem 0 0; font-size: .9rem; color: var(--tinta-2); }
+
+  /* Portada */
+  .portada { display: grid; gap: 2.5rem; align-items: center; padding-block: 1.5rem 4.5rem; }
+  @media (min-width: 900px) { .portada { grid-template-columns: 1fr 1fr; gap: 4rem; padding-block: 3.5rem 6rem; } }
+  h1 {
+    margin: 0 0 1.1rem; font: 800 clamp(2.45rem, 1.5rem + 4.6vw, 4.3rem)/1.02 var(--display);
+    letter-spacing: -.035em; text-wrap: balance;
+  }
+  h1 em { font-style: normal; color: var(--oro); }
+  /* Lo que es, en palabras de buscador, encima del titular */
+  .antetitulo { display: block; width: fit-content; margin-bottom: 1rem; padding: .4rem .8rem; border-radius: 999px;
+                background: var(--teal-suave); color: var(--teal); letter-spacing: 0;
+                font: 650 clamp(.8rem, .76rem + .2vw, .9rem)/1.3 var(--texto); }
+  .entradilla { margin: 0 0 1.75rem; font-size: clamp(1.05rem, .98rem + .3vw, 1.18rem); color: var(--tinta-2);
+                max-width: 32rem; text-wrap: pretty; }
+
+  /* La tarjeta de la portada: dos semanas del mes como las pinta la app. En cada día, el turno
+     de cada persona con su inicial en su color; el día que libran los dos, un corazón detrás
+     del número. */
+  .cuadrante {
+    margin: 0; padding: 1.25rem 1rem 1.1rem; border-radius: 28px; background: var(--fondo);
+    border: 1px solid var(--linea); box-shadow: var(--sombra);
+    --ana: #0e6b7d; --javi: #c6964a;
+    animation: sube .8s var(--suave) both; animation-delay: .1s;
+  }
+  /* En el móvil la tarjeta llega casi al borde: como en la app, cada día necesita sitio para dos turnos */
+  .cuadrante-cabecera { display: flex; justify-content: space-between; align-items: center;
+                        gap: .75rem; margin: 0 .35rem .8rem; }
+  .cuadrante-mes { font: 750 1.15rem/1 var(--display); }
+  .personas { display: flex; gap: .8rem; font: 600 .8rem/1 var(--texto); color: var(--tinta-2); }
+  .persona { display: inline-flex; align-items: center; gap: .3rem; }
+  .insignia { display: inline-grid; place-items: center; width: 1.05rem; height: 1.05rem; border-radius: 50%;
+              background: var(--p); color: #fff; font: 800 .6rem/1 var(--texto); font-style: normal; }
+  .mes-mini { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+  .dsem { text-align: center; padding-bottom: .35rem; font: 600 .7rem/1 var(--mono); color: var(--tinta-2); }
+  .dm { display: flex; flex-direction: column; align-items: center; gap: .4rem;
+        padding: .45rem 0 .6rem; border-top: 1px solid var(--linea); }
+  .num { position: relative; z-index: 0; font: 600 .95rem/1.2 var(--texto); }
+  .dm.juntos .num { color: var(--oro); font-weight: 750; }
+  /* El corazón de los días que libran los dos: aparece cuando ya están todos los turnos y late una vez */
+  .dm.juntos .num::before {
+    content: "\2665"; position: absolute; left: 50%; top: 50%; z-index: -1;
+    transform: translate(-50%, -54%); font-size: 2.5em; line-height: 1; color: var(--corazon);
+    animation: late 1.1s cubic-bezier(.2,.9,.25,1.2) both; animation-delay: calc(1.4s + var(--j, 0) * 120ms);
+  }
+  /* Los dos turnos del día, uno encima del otro: así se lee de quién es cada uno */
+  .turnos { display: flex; flex-direction: column; gap: .45rem; }
+  .bola {
+    position: relative; width: clamp(1.45rem, 6.8vw, 2rem); aspect-ratio: 1; border-radius: 50%;
+    display: grid; place-items: center; background: var(--c); color: var(--tc, #14181a);
+    font: 750 .78rem/1 var(--texto);
+    animation: aparece .45s cubic-bezier(.2,.9,.25,1.25) both; animation-delay: calc(var(--i) * 45ms + 350ms);
+  }
+  .bola .insignia { position: absolute; top: -.32rem; right: -.38rem; width: .78rem; height: .78rem;
+                    font-size: .45rem; box-shadow: 0 0 0 1.5px var(--fondo); }
+  .b-m { --c: var(--m); } .b-t { --c: var(--t); } .b-n { --c: var(--n); --tc: #fff; } .b-l { --c: var(--l); }
+  @media (max-width: 559px) {
+    .cuadrante { margin-inline: -.75rem; padding-inline: .35rem; border-radius: 22px; }
+  }
+  .cuadrante figcaption { margin: .9rem .35rem 0; font-size: .95rem; color: var(--tinta-2); }
+  .cuadrante figcaption strong { color: var(--oro); }
+  .claves { display: block; margin-top: .35rem; font: 500 .72rem/1.4 var(--mono); }
+  @keyframes sube { from { opacity: 0; transform: translateY(24px) scale(.98); } to { opacity: 1; transform: none; } }
+  @keyframes aparece { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }
+  @keyframes late {
+    0%   { transform: translate(-50%, -54%) scale(0); }
+    30%  { transform: translate(-50%, -54%) scale(1.25); }
+    45%  { transform: translate(-50%, -54%) scale(.95); }
+    62%  { transform: translate(-50%, -54%) scale(1.18); }
+    100% { transform: translate(-50%, -54%) scale(1); }
+  }
+
+  /* Bloques */
+  .bloque { padding-block: clamp(3.25rem, 2.2rem + 4vw, 5rem); border-top: 1px solid var(--linea); }
+  .bloque-papel { background: var(--papel); border-top: 0; }
+  h2 { margin: 0 0 .9rem; font: 780 clamp(1.75rem, 1.2rem + 2.4vw, 2.6rem)/1.08 var(--display); letter-spacing: -.025em; text-wrap: balance; }
+  .bloque p { color: var(--tinta-2); max-width: 40rem; text-wrap: pretty; }
+  .bloque p strong { color: var(--tinta); }
+
+  /* La app de verdad: tres pantallas. En el móvil, un carrusel que se desliza con el dedo. */
+  .pantallas { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(13.5rem, 1fr); gap: 1.5rem;
+               margin: 2.5rem -1.25rem 0; padding: .75rem 1.25rem 1.25rem; overflow-x: auto;
+               scroll-snap-type: x mandatory; scroll-padding-inline: 1.25rem; scrollbar-width: none;
+               overscroll-behavior-x: contain; }
+  .pantallas::-webkit-scrollbar { display: none; }
+  @media (min-width: 760px) { .pantallas { grid-auto-columns: minmax(0, 1fr); } }
+  @media (min-width: 900px) { .pantallas { margin-inline: 0; padding-inline: 0; overflow: visible;
+                                            grid-auto-columns: minmax(0, 17rem); justify-content: center; gap: 3.5rem; } }
+  .pantalla { margin: 0; scroll-snap-align: start; }
+  .movil { border-radius: 2.4rem; border: 7px solid #1b2124; overflow: hidden; background: #1b2124;
+           box-shadow: var(--sombra); aspect-ratio: 600 / 1300;
+           transition: transform .35s var(--suave), box-shadow .35s var(--suave); }
+  .movil img { width: 100%; height: 100%; object-fit: cover; }
+  @media (prefers-color-scheme: dark) { .movil { border-color: #2c363a; } }
+  .pantalla figcaption { margin-top: 1rem; font-size: .95rem; color: var(--tinta-2); text-align: center; text-wrap: balance; }
+  .pantalla figcaption strong { display: block; color: var(--tinta); font: 700 1.05rem/1.3 var(--display); }
+
+  /* Cómo funciona: tres pasos, en orden */
+  .pasos { list-style: none; margin: 2.25rem 0 0; padding: 0; display: grid; gap: 1.25rem; counter-reset: paso; }
+  @media (min-width: 800px) { .pasos { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; } }
+  .pasos li { counter-increment: paso; padding: 1.4rem 1.4rem 1.5rem; border-radius: 22px; background: var(--fondo);
+              border: 1px solid var(--linea); }
+  .pasos li::before { content: counter(paso); display: grid; place-items: center; width: 2.1rem; height: 2.1rem;
+                      border-radius: 50%; background: var(--teal); color: var(--sobre-teal);
+                      font: 700 .95rem/1 var(--mono); margin-bottom: .9rem; }
+  .pasos h3 { margin: 0 0 .35rem; font: 720 1.2rem/1.25 var(--display); }
+  .pasos p { margin: 0; font-size: .98rem; }
+
+  /* Para quién */
+  .oficios { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.75rem 0 1.5rem; padding: 0; list-style: none; }
+  .oficios li { padding: .45rem .85rem; border-radius: 999px; border: 1.5px solid var(--linea);
+                background: var(--fondo); font: 600 .95rem/1.2 var(--texto); }
+
+  /* Gratis y Pro */
+  .planes { display: grid; gap: 1.25rem; margin-top: 2.25rem; }
+  @media (min-width: 800px) { .planes { grid-template-columns: 1fr 1fr; } }
+  .plan { padding: clamp(1.25rem, 1rem + 1vw, 1.75rem); border-radius: 24px; border: 1px solid var(--linea); background: var(--fondo); }
+  .plan-pro { border: 2px solid var(--oro); background: linear-gradient(180deg, var(--oro-fondo), var(--fondo) 9rem); }
+  .plan h3 { margin: 0; font: 760 1.35rem/1.2 var(--display); }
+  .precio { margin: .35rem 0 1rem; font: 600 .9rem/1.45 var(--mono); color: var(--tinta-2); }
+  .plan-pro .precio { color: var(--oro); }
+  .precio small { display: block; font: 500 .85rem/1.4 var(--texto); color: var(--tinta-2); }
+  .plan ul { margin: 0; padding-left: 1.15rem; color: var(--tinta-2); }
+  .plan li { margin-bottom: .4rem; }
+  .plan li strong { color: var(--tinta); }
+
+  /* Tarjetas: en pantallas con ratón se levantan un poco al pasar por encima */
+  @media (hover: hover) and (pointer: fine) {
+    .pasos li, .plan { transition: translate .3s var(--suave), box-shadow .3s var(--suave),
+                                   background-color .35s ease, border-color .35s ease; }
+    .pasos li:hover, .plan:hover { translate: 0 -4px; box-shadow: var(--sombra-alta); }
+    .pasos li:hover { border-color: color-mix(in srgb, var(--teal) 35%, var(--linea)); }
+    .pantalla:hover .movil { transform: translateY(-6px) rotate(-.6deg); box-shadow: var(--sombra-alta); }
+    .oficios li { transition: border-color .2s ease, color .2s ease, background-color .35s ease; }
+    .oficios li:hover { border-color: var(--teal); color: var(--teal); }
+  }
+
+  /* Preguntas */
+  .preguntas { margin-top: 2rem; max-width: 46rem; }
+  details { border-top: 1px solid var(--linea); }
+  details:last-of-type { border-bottom: 1px solid var(--linea); }
+  summary { cursor: pointer; list-style: none; padding: 1.1rem 2.5rem 1.1rem 0; position: relative; min-height: 44px;
+            font: 680 clamp(1rem, .96rem + .2vw, 1.08rem)/1.35 var(--display); }
+  summary:hover { color: var(--teal); }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: .25rem; top: 50%; margin-top: -.75rem; width: 1.5rem; height: 1.5rem;
+                   display: grid; place-items: center; font: 400 1.5rem/1 var(--texto);
+                   color: var(--teal); transition: transform .3s var(--suave); }
+  details[open] summary::after { transform: rotate(45deg); }
+  details p { margin: 0 0 1.2rem; }
+  details[open] p { animation: despliega .35s var(--suave); }
+  @keyframes despliega { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+  .mas-ayuda { margin-top: 1.5rem; }
+
+  /* Cierre y pie */
+  .cierre { text-align: center; padding-block: clamp(3.5rem, 2.5rem + 4vw, 5.5rem); }
+  .cierre h2 { margin-bottom: 1.5rem; }
+  .cierre .nota { margin-top: 1rem; }
+  footer { border-top: 1px solid var(--linea); padding-block: 1.5rem calc(2.5rem + env(safe-area-inset-bottom, 0px));
+           font-size: .9rem; color: var(--tinta-2); text-align: center; }
+  footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0 .75rem; margin-bottom: .5rem; }
+  footer nav a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; justify-content: center; padding: 0 .3rem; }
+
+  /* Aparición al bajar: solo si hay JavaScript y si nadie ha pedido menos movimiento. Sin JS, todo
+     se ve desde el principio. */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .revela { opacity: 0; transform: translateY(22px);
+                  transition-property: opacity, transform, translate, box-shadow, background-color, border-color;
+                  transition-duration: .7s, .7s, .3s, .3s, .35s, .35s;
+                  transition-timing-function: var(--suave);
+                  transition-delay: var(--retraso, 0s), var(--retraso, 0s), 0s, 0s, 0s, 0s; }
+    .js .revela.visto { opacity: 1; transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
 </style>
 </head>
 <body>
-<main>
 
-  <div class="hero">
-    <img class="icono" src="icono.png" alt="" width="88" height="88">
-    <h1>El calendario de los dos</h1>
-    <p class="entradilla">Los turnos de uno, los planes del otro, la compra, los recados
-    y el viaje de agosto. En un sitio, y siempre igual en los dos móviles.</p>
-    <p class="plataformas">iPhone y Android — porque si solo puede instalarlo uno, no sirve</p>
-  </div>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
 
-  <h2>No es un calendario más</h2>
-  <p>Un calendario compartido normal te deja apuntar eventos. Eso ya lo hace Google.
-  El problema de una pareja no son los eventos: es que la logística está repartida en
-  cinco sitios distintos —el calendario del trabajo, la nota de la compra, el grupo de
-  WhatsApp con los enlaces del viaje, y lo que uno se acuerde de decirle al otro.</p>
-  <p>InSync mete todo eso en la misma pantalla.</p>
-
-  <div class="rejilla">
-    <div class="celda">
-      <h3>Turnos de trabajo</h3>
-      <p>Rotativos incluidos: defines el patrón una vez y el mes se rellena solo,
-      con excepciones cuando cambias un turno.</p>
-    </div>
-    <div class="celda">
-      <h3>La compra y los recados</h3>
-      <p>La lista ordenada por tienda y las tareas de casa, compartidas. Lo que tacha
-      uno lo ve el otro.</p>
-    </div>
-    <div class="celda">
-      <h3>Viajes con itinerario</h3>
-      <p>Día a día, con trayectos, reservas y los adjuntos que quieras tener a mano.</p>
-    </div>
-    <div class="celda">
-      <h3>Notas con checklist</h3>
-      <p>Para lo que no es un evento pero tampoco se puede olvidar.</p>
-    </div>
-    <div class="celda">
-      <h3>Widget y Siri</h3>
-      <p>El día de un vistazo en la pantalla de inicio, y crear eventos hablando.</p>
-    </div>
-    <div class="celda">
-      <h3>Funciona sin cobertura</h3>
-      <p>Todo se guarda en el móvil. Cuando vuelve la red, se pone al día solo.</p>
+<header class="cabecera">
+  <div class="envoltura barra">
+    <a class="marca" href="./"><img src="icono.png" alt="" width="32" height="32">InSync</a>
+    <div class="barra-derecha">
+      <nav class="barra-enlaces" aria-label="Secciones">
+        <a href="#como-funciona">Cómo funciona</a><a href="#precio">Precio</a><a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="barra-descarga" href="https://apps.apple.com/app/id6798864347">Descargar</a>
     </div>
   </div>
+</header>
 
-  <h2>Lo que no hace</h2>
-  <p>No lleva anuncios, no vende tus datos y no te pide la ubicación. Si adjuntas una
-  foto a un viaje, se le quitan las coordenadas antes de subirla. Lo que recoge y lo que
-  no está escrito entero en la
-  <a href="privacidad.html">política de privacidad</a>, sin letra pequeña.</p>
+<main id="contenido">
 
-  <div class="aviso">
-    <p><strong>Todavía no está publicada.</strong> InSync está terminando la revisión de
-    la App Store. Cuando esté disponible, el enlace de descarga aparecerá aquí.</p>
-    <p>Si quieres que te avise:
-    <a href="mailto:idanideveloper@gmail.com?subject=Avisadme%20cuando%20salga%20InSync">idanideveloper@gmail.com</a>.</p>
-  </div>
+  <section class="envoltura portada">
+    <div>
+      <h1><span class="antetitulo">Calendario de turnos para iPhone</span>Tus turnos, <em>claros</em> de un&nbsp;vistazo.</h1>
+      <p class="entradilla">Mete tu cuadrante una vez (rotativos, noches, guardias) y el mes se
+      rellena solo. Lo ves en el calendario y en el widget, sin anuncios. Y si tu pareja también trabaja a
+      turnos, veis los dos quién trabaja, quién libra y qué días libráis juntos.</p>
+      <a class="descarga" href="https://apps.apple.com/app/id6798864347">
+        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>
+        Descárgala gratis en la App Store
+      </a>
+      <p class="nota">Para iPhone. Android, más adelante.</p>
+    </div>
 
-  <footer>
-    <a href="privacidad.html">Privacidad</a>·<a href="soporte.html">Soporte</a>·<a href="mailto:idanideveloper@gmail.com">Contacto</a>
-    <p style="margin-top:1rem">Hecho por Daniel Benito.</p>
-  </footer>
+    <figure class="cuadrante" role="img" aria-label="Dos semanas de octubre en InSync con los turnos de Ana y de Javi. Libran los dos el sábado 17 y el fin de semana del 24.">
+      <div class="cuadrante-cabecera" aria-hidden="true">
+        <span class="cuadrante-mes">Octubre</span>
+        <span class="personas"><span class="persona"><i class="insignia" style="--p: var(--ana)">A</i>Ana</span><span class="persona"><i class="insignia" style="--p: var(--javi)">J</i>Javi</span></span>
+      </div>
+      <div class="mes-mini" aria-hidden="true">
+        <span class="dsem">L</span><span class="dsem">M</span><span class="dsem">X</span><span class="dsem">J</span><span class="dsem">V</span><span class="dsem">S</span><span class="dsem">D</span>
+          <div class="dm"><span class="num">12</span><span class="turnos"><span class="bola b-t" style="--i: 0"><i class="insignia" style="--p: var(--ana)">A</i>T</span><span class="bola b-m" style="--i: 1"><i class="insignia" style="--p: var(--javi)">J</i>M</span></span></div>
+          <div class="dm"><span class="num">13</span><span class="turnos"><span class="bola b-t" style="--i: 1"><i class="insignia" style="--p: var(--ana)">A</i>T</span><span class="bola b-m" style="--i: 2"><i class="insignia" style="--p: var(--javi)">J</i>M</span></span></div>
+          <div class="dm"><span class="num">14</span><span class="turnos"><span class="bola b-n" style="--i: 2"><i class="insignia" style="--p: var(--ana)">A</i>N</span><span class="bola b-m" style="--i: 3"><i class="insignia" style="--p: var(--javi)">J</i>M</span></span></div>
+          <div class="dm"><span class="num">15</span><span class="turnos"><span class="bola b-n" style="--i: 3"><i class="insignia" style="--p: var(--ana)">A</i>N</span><span class="bola b-m" style="--i: 4"><i class="insignia" style="--p: var(--javi)">J</i>M</span></span></div>
+          <div class="dm"><span class="num">16</span><span class="turnos"><span class="bola b-l" style="--i: 4"><i class="insignia" style="--p: var(--ana)">A</i>L</span><span class="bola b-m" style="--i: 5"><i class="insignia" style="--p: var(--javi)">J</i>M</span></span></div>
+          <div class="dm juntos" style="--j: 0"><span class="num">17</span><span class="turnos"><span class="bola b-l" style="--i: 5"><i class="insignia" style="--p: var(--ana)">A</i>L</span><span class="bola b-l" style="--i: 6"><i class="insignia" style="--p: var(--javi)">J</i>L</span></span></div>
+          <div class="dm"><span class="num">18</span><span class="turnos"><span class="bola b-m" style="--i: 6"><i class="insignia" style="--p: var(--ana)">A</i>M</span><span class="bola b-l" style="--i: 7"><i class="insignia" style="--p: var(--javi)">J</i>L</span></span></div>
+          <div class="dm"><span class="num">19</span><span class="turnos"><span class="bola b-m" style="--i: 7"><i class="insignia" style="--p: var(--ana)">A</i>M</span><span class="bola b-m" style="--i: 8"><i class="insignia" style="--p: var(--javi)">J</i>M</span></span></div>
+          <div class="dm"><span class="num">20</span><span class="turnos"><span class="bola b-t" style="--i: 8"><i class="insignia" style="--p: var(--ana)">A</i>T</span><span class="bola b-m" style="--i: 9"><i class="insignia" style="--p: var(--javi)">J</i>M</span></span></div>
+          <div class="dm"><span class="num">21</span><span class="turnos"><span class="bola b-t" style="--i: 9"><i class="insignia" style="--p: var(--ana)">A</i>T</span><span class="bola b-m" style="--i: 10"><i class="insignia" style="--p: var(--javi)">J</i>M</span></span></div>
+          <div class="dm"><span class="num">22</span><span class="turnos"><span class="bola b-n" style="--i: 10"><i class="insignia" style="--p: var(--ana)">A</i>N</span><span class="bola b-m" style="--i: 11"><i class="insignia" style="--p: var(--javi)">J</i>M</span></span></div>
+          <div class="dm"><span class="num">23</span><span class="turnos"><span class="bola b-n" style="--i: 11"><i class="insignia" style="--p: var(--ana)">A</i>N</span><span class="bola b-m" style="--i: 12"><i class="insignia" style="--p: var(--javi)">J</i>M</span></span></div>
+          <div class="dm juntos" style="--j: 1"><span class="num">24</span><span class="turnos"><span class="bola b-l" style="--i: 12"><i class="insignia" style="--p: var(--ana)">A</i>L</span><span class="bola b-l" style="--i: 13"><i class="insignia" style="--p: var(--javi)">J</i>L</span></span></div>
+          <div class="dm juntos" style="--j: 2"><span class="num">25</span><span class="turnos"><span class="bola b-l" style="--i: 13"><i class="insignia" style="--p: var(--ana)">A</i>L</span><span class="bola b-l" style="--i: 14"><i class="insignia" style="--p: var(--javi)">J</i>L</span></span></div>
+      </div>
+      <figcaption><strong aria-hidden="true">&#9829;</strong> Ana y Javi libran los dos el sábado 17 y el fin de semana del 24.<span class="claves" aria-hidden="true">M mañana · T tarde · N noche · L libre</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="bloque bloque-papel" aria-labelledby="t-whatsapp">
+    <div class="envoltura">
+      <div class="revela">
+        <h2 id="t-whatsapp">Se acabó la foto del cuadrante por WhatsApp.</h2>
+        <p>Cada uno mete el suyo una vez y los dos lo veis en el mismo calendario. Lo que cambia uno le
+        llega al otro en segundos, y sin cobertura sigue funcionando.</p>
+      </div>
+      <div class="pantallas">
+        <figure class="pantalla revela">
+          <div class="movil"><img src="img/mes-es.webp" width="600" height="1300" decoding="async" alt="El mes en InSync, con los turnos de los dos en círculos de colores y los planes de cada día."></div>
+          <figcaption><strong>El mes de los dos</strong>Quién trabaja, quién libra y qué tenéis planeado.</figcaption>
+        </figure>
+        <figure class="pantalla revela" style="--retraso: .1s">
+          <div class="movil"><img src="img/widget-es.webp" width="600" height="1300" loading="lazy" decoding="async" alt="El widget del mes de InSync en la pantalla de inicio del iPhone, con los turnos de cada día."></div>
+          <figcaption><strong>Sin abrir la app</strong>Tu turno de hoy y la semana, gratis. El mes entero, con Pro.</figcaption>
+        </figure>
+        <figure class="pantalla revela" style="--retraso: .2s">
+          <div class="movil"><img src="img/compra-es.webp" width="600" height="1300" loading="lazy" decoding="async" alt="La lista de la compra de InSync, con lo que falta por comprar y la tienda de cada cosa."></div>
+          <figcaption><strong>Y lo de casa</strong>La compra y los recados, igual en los dos móviles.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloque" id="como-funciona" aria-labelledby="t-pasos">
+    <div class="envoltura">
+      <h2 id="t-pasos" class="revela">En dos minutos, el mes hecho.</h2>
+      <ol class="pasos">
+        <li class="revela">
+          <h3>Mete tu cuadrante</h3>
+          <p>Eliges una plantilla —5x2, 4x2, 2-2-3, mañana, tarde y noche— o haces tu ciclo, y el mes
+          se rellena solo. Un cambio suelto es un toque.</p>
+        </li>
+        <li class="revela" style="--retraso: .1s">
+          <h3>Invita a tu pareja, si quieres</h3>
+          <p>Le mandas un código por WhatsApp. Cuando entra, cada uno ve los turnos del otro. Y si vas
+          por tu cuenta, el calendario y el widget funcionan igual.</p>
+        </li>
+        <li class="revela" style="--retraso: .2s">
+          <h3>Mirad el mes</h3>
+          <p>Quién trabaja, quién libra y los días que libráis juntos, con su corazón. Las horas del
+          mes y los días libres que te quedan, también.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="bloque bloque-papel" aria-labelledby="t-oficios">
+    <div class="envoltura revela">
+      <h2 id="t-oficios">Para quien trabaja a turnos.</h2>
+      <p>Turnos rotativos de enfermería, el cuadrante de policía o de Guardia Civil, guardias médicas
+      o noches en la fábrica: si tu horario cambia cada semana, InSync te lo pone claro.</p>
+      <ul class="oficios">
+        <li>Enfermería</li><li>TCAE</li><li>Medicina y guardias</li><li>Policía</li><li>Guardia Civil</li>
+        <li>Bomberos</li><li>Fábricas con turnos rotativos</li><li>Seguridad</li><li>Hostelería</li>
+      </ul>
+      <p>Y para sus parejas, que no tienen por qué ir a turnos: si trabajas de lunes a viernes, lo
+      marcas en un toque y también cuenta para saber cuándo libráis.</p>
+    </div>
+  </section>
+
+  <section class="bloque" id="precio" aria-labelledby="t-precio">
+    <div class="envoltura">
+      <h2 id="t-precio" class="revela">Gratis. Y Pro, si queréis más.</h2>
+      <div class="planes">
+        <div class="plan revela">
+          <h3>Gratis</h3>
+          <p class="precio">0 €</p>
+          <ul>
+            <li>El calendario compartido y tus turnos</li>
+            <li>Los turnos de tu pareja y «Libráis juntos»</li>
+            <li>Horas trabajadas y días libres</li>
+            <li>La compra y los recados</li>
+            <li>El widget de hoy y el de la semana</li>
+          </ul>
+        </div>
+        <div class="plan plan-pro revela" style="--retraso: .1s">
+          <h3>InSync Pro</h3>
+          <p class="precio">2,99 € al mes · 24,99 € al año<small>El anual empieza con un mes de prueba gratis.</small></p>
+          <ul>
+            <li>Los widgets del mes, de cuatro semanas y de la compra</li>
+            <li>Diez estilos para pintar los turnos</li>
+            <li>Hasta 6 personas en el grupo y 5 calendarios de fuera</li>
+            <li>Más viajes, notas y listas, con sus adjuntos</li>
+            <li><strong>Lo paga uno y lo tiene todo el grupo</strong></li>
+          </ul>
+        </div>
+      </div>
+      <p class="nota">Sin anuncios en ninguno de los dos.</p>
+    </div>
+  </section>
+
+  <section class="bloque bloque-papel" id="preguntas" aria-labelledby="t-preguntas">
+    <div class="envoltura revela">
+      <h2 id="t-preguntas">Preguntas frecuentes</h2>
+      <div class="preguntas">
+        <details>
+          <summary>¿Mi pareja ve mis turnos gratis?</summary>
+          <p>Sí. Ver los turnos del otro, el calendario compartido, la compra y los recados son gratis.
+          InSync Pro es opcional.</p>
+        </details>
+        <details>
+          <summary>¿Y si mi pareja tiene Android?</summary>
+          <p>De momento InSync es solo para iPhone. La versión de Android llegará más adelante.</p>
+        </details>
+        <details>
+          <summary>¿Sirve para turnos rotativos?</summary>
+          <p>Sí. Eliges una plantilla (5x2, 4x2, 2-2-3, mañana/tarde/noche) o haces tu ciclo, y el mes
+          se rellena solo. Un cambio suelto es un toque.</p>
+        </details>
+        <details>
+          <summary>¿La puedo usar sin pareja?</summary>
+          <p>Sí. El calendario de turnos, las horas trabajadas, los días libres y el widget funcionan
+          igual sin nadie más.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto cuesta?</summary>
+          <p>Es gratis y sin anuncios. InSync Pro es opcional: 2,99 € al mes o 24,99 € al año, el anual
+          con un mes de prueba gratis, y lo paga una persona para todo el grupo.</p>
+        </details>
+        <details>
+          <summary>¿Qué pasa con mis datos?</summary>
+          <p>No lleva anuncios, no vende tus datos y no te pide la ubicación. Si adjuntas una foto, se
+          le quitan las coordenadas antes de subirla. Todo, sin letra pequeña, en la
+          <a href="privacidad.html">política de privacidad</a>.</p>
+        </details>
+      </div>
+      <p class="mas-ayuda">¿Otra duda? Mira el <a href="soporte.html">soporte</a> o lo que trae cada versión en
+      <a href="novedades.html">novedades</a>.</p>
+    </div>
+  </section>
+
+  <section class="envoltura cierre revela" aria-labelledby="t-cierre">
+    <h2 id="t-cierre">Mete tu cuadrante esta noche.<br>Mañana ya lo tienes en el widget.</h2>
+    <a class="descarga" href="https://apps.apple.com/app/id6798864347">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>
+      Descárgala gratis
+    </a>
+    <p class="nota">Para iPhone, con iOS 17 o posterior.</p>
+  </section>
 
 </main>
+
+<footer>
+  <div class="envoltura">
+    <nav aria-label="Más páginas">
+      <a href="novedades.html">Novedades</a><a href="soporte.html">Soporte</a><a href="privacidad.html">Privacidad</a><a href="aviso-legal.html">Aviso legal</a><a href="en/" hreflang="en" lang="en">English</a><a href="mailto:idanideveloper@gmail.com">Contacto</a>
+    </nav>
+    Hecho en España por Daniel Benito.
+  </div>
+</footer>
+
+<script>
+  // Aparición suave al bajar y borde de la barra al despegarse. Sin librerías; si algo falla,
+  // el contenido ya está visible igual (la clase .js solo oculta lo que este script enseña).
+  (function () {
+    var els = document.querySelectorAll('.revela');
+    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('visto'); }); }
+    else {
+      var io = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visto'); io.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -6% 0px' });
+      els.forEach(function (e) { io.observe(e); });
+    }
+    var cab = document.querySelector('.cabecera'), pend = false;
+    function borde() { pend = false; cab.classList.toggle('con-borde', window.scrollY > 8); }
+    window.addEventListener('scroll', function () { if (!pend) { pend = true; requestAnimationFrame(borde); } }, { passive: true });
+    borde();
+  })();
+</script>
+
 </body>
 </html>

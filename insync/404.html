@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Página no encontrada · InSync</title>
+<!-- Solo la usa Vercel cuando sirve esta carpeta en la raíz de un dominio (insync-calendar.io).
+     Bajo idanidev-portfolio.vercel.app/insync/ no se usa: ahí manda el 404 del portfolio. -->
+<style>
+  :root {
+    --tinta: #16191c; --tinta-2: #4a5157; --fondo: #ffffff;
+    --linea: #e3e6e8; --acento: #1d5f6b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --tinta: #e8eced; --tinta-2: #a9b3b6; --fondo: #14181a;
+            --linea: #2a3134; --acento: #6fc3d2; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--fondo); color: var(--tinta);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 34rem; margin: 0 auto; padding: 6rem 1.5rem; text-align: center; }
+  .icono { width: 72px; height: 72px; border-radius: 16px; display: block; margin: 0 auto 1.5rem;
+           box-shadow: 0 2px 14px rgba(0,0,0,.12); }
+  h1 { font-size: 1.8rem; line-height: 1.2; margin: 0 0 .75rem; letter-spacing: -.02em; }
+  p { color: var(--tinta-2); margin: 0 0 1.5rem; }
+  a { color: var(--acento); }
+  .boton {
+    display: inline-block; padding: .8rem 1.5rem; border-radius: 999px;
+    background: var(--acento); color: var(--fondo); font-weight: 600; text-decoration: none;
+  }
+  .otra { display: block; margin-top: 1.25rem; font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <img class="icono" src="/icono.png" alt="" width="72" height="72">
+  <h1>Esta página no existe, pero InSync sí</h1>
+  <p>El enlace está mal o la página se ha movido. Lo demás sigue en su sitio.</p>
+  <a class="boton" href="/">Ir al inicio</a>
+  <a class="otra" href="https://apps.apple.com/app/id6798864347">o descárgala en la App Store</a>
+</main>
+</body>
+</html>

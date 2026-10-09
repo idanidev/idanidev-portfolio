@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mapa de la web de InSync. Para que los buscadores lo encuentren, el robots.txt de la raíz del
+     portfolio tiene que llevar: Sitemap: https://idanidev-portfolio.vercel.app/insync/sitemap.xml -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://idanidev-portfolio.vercel.app/insync/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idanidev-portfolio.vercel.app/insync/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idanidev-portfolio.vercel.app/insync/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idanidev-portfolio.vercel.app/insync/"/>
+  </url>
+  <url>
+    <loc>https://idanidev-portfolio.vercel.app/insync/en/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idanidev-portfolio.vercel.app/insync/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idanidev-portfolio.vercel.app/insync/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://idanidev-portfolio.vercel.app/insync/"/>
+  </url>
+  <url>
+    <loc>https://idanidev-portfolio.vercel.app/insync/novedades.html</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://idanidev-portfolio.vercel.app/insync/privacidad.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idanidev-portfolio.vercel.app/insync/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idanidev-portfolio.vercel.app/insync/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://idanidev-portfolio.vercel.app/insync/en/privacy.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://idanidev-portfolio.vercel.app/insync/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://idanidev-portfolio.vercel.app/insync/en/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://idanidev-portfolio.vercel.app/insync/aviso-legal.html</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+</urlset>

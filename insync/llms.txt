@@ -1,0 +1,39 @@
+# InSync: Turnos en Pareja
+
+> Calendario de turnos para iPhone, para quien trabaja a turnos (enfermería, TCAE, guardias médicas, policía, Guardia Civil, bomberos, fábricas, seguridad, hostelería) y para su pareja. Cada uno mete su cuadrante una vez (rotativos incluidos) y los dos veis en el mismo calendario quién trabaja, quién libra y qué días libráis juntos. También vale para una sola persona: el calendario de turnos y los widgets funcionan igual sin nadie más. App para iPhone, gratis en la App Store, con un plan Pro opcional.
+
+InSync lo hace Daniel Benito, un desarrollador independiente en España. Está en español e inglés. Hoy solo existe para iPhone (iOS 17 o posterior); la versión de Android no está publicada.
+
+## Qué hace
+
+- Turnos de trabajo: tipos de turno con color y horario, patrones rotativos (plantillas 5x2, 4x2, 2-2-3, mañana/tarde/noche, ciclos por semanas), cambios de un día suelto sin rehacer el patrón y horario fijo de lunes a viernes.
+- «Libráis juntos»: los próximos días que libran los dos, marcados en el calendario.
+- Horas trabajadas por mes y días libres por bolsas (vacaciones, asuntos propios, convenio), con lo que queda de cada una.
+- Calendario compartido con vistas de mes, quincena, semana y día. Lo que crea uno aparece en el móvil del otro en segundos.
+- Calendarios del iPhone dentro (iCloud, y los de Google u Outlook configurados en el iPhone), eligiendo qué se comparte.
+- Lista de la compra por supermercado, tareas de casa con responsable, notas con checklist y viajes por días con sus adjuntos.
+- Widgets en la pantalla de inicio y atajos de Siri («¿qué tengo hoy?»).
+- Funciona sin cobertura: se guarda en el móvil y se sincroniza al volver la red.
+
+## Precio
+
+- Gratis: el calendario compartido, los turnos de los dos, la compra, las tareas, los widgets de hoy y de la semana, un calendario externo, y un viaje, una nota y una lista.
+- InSync Pro: 2,99 € al mes o 24,99 € al año (el anual, con un mes de prueba gratis). Lo paga una persona y lo tiene todo el grupo. Añade los widgets del mes, de cuatro semanas y de la compra, diez estilos para pintar los turnos, hasta 6 personas en el grupo, 5 calendarios externos, 100 viajes, 500 notas y listas, y 500 MB para adjuntos.
+
+## Privacidad
+
+Sin anuncios y sin vender datos. No pide la ubicación, y a las fotos que se adjuntan se les quitan las coordenadas antes de subirlas. La app solo cuenta, de forma anónima y agregada, qué partes se usan. La cuenta se borra desde la propia app.
+
+## Enlaces
+
+- [Descarga en la App Store](https://apps.apple.com/app/id6798864347)
+- [Web en español](https://idanidev-portfolio.vercel.app/insync/)
+- [Web en inglés](https://idanidev-portfolio.vercel.app/insync/en/)
+- [Política de privacidad](https://idanidev-portfolio.vercel.app/insync/privacidad.html)
+- [Soporte](https://idanidev-portfolio.vercel.app/insync/soporte.html)
+- [Novedades de cada versión](https://idanidev-portfolio.vercel.app/insync/novedades.html)
+- Contacto: idanideveloper@gmail.com
+
+## In English
+
+InSync is a shared shift calendar for iPhone. Each person adds their work rota once, and both see who is working, who is off, and which days they are both off. It also works for one person on their own. Free on the App Store; the optional Pro plan costs €2.99 a month or €24.99 a year (with a free month on the yearly plan). No ads and no selling of data. iPhone only for now.
