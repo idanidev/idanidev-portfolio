@@ -53,3 +53,23 @@ footer { border-top: 1px solid var(--linea); padding-block: 2rem 3rem; font-size
          color: var(--tinta-2); text-align: center; }
 footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.25rem; margin-bottom: .9rem; }
 h2 + .fecha { margin: -.35rem 0 .75rem; }
+
+/* Guías (turnos en pareja, por oficio y comparativas): la respuesta corta arriba, que es lo que
+   citan buscadores e IAs, el botón de la portada y la tabla comparativa con cabecera fija. */
+.migas { margin: 0 0 1rem; font-size: .85rem; color: var(--tinta-2); }
+.respuesta { border-left: 4px solid var(--teal); background: var(--papel); border-radius: 0 16px 16px 0;
+             padding: 1rem 1.25rem; margin: 1.25rem 0 1.5rem; }
+.respuesta p { margin: 0; color: var(--tinta); }
+.descarga { display: inline-flex; align-items: center; justify-content: center; min-height: 52px;
+            padding: .85rem 1.5rem; border-radius: 999px; background: var(--teal); color: var(--sobre-teal);
+            font: 650 1.05rem/1.2 var(--texto); text-decoration: none; text-align: center; }
+.descarga:hover { filter: brightness(1.06); }
+.cta { margin: 2.5rem 0 0; padding: 1.5rem; border-radius: 20px; background: var(--papel); text-align: center; }
+.cta p { margin: 0 0 1rem; color: var(--tinta); }
+.cta .nota { margin: .9rem 0 0; font-size: .9rem; color: var(--tinta-2); }
+.tabla table { min-width: 40rem; }
+.tabla th { background: var(--papel); }
+.tabla td:first-child, .tabla th:first-child { position: sticky; left: 0; background: var(--fondo); }
+.tabla th:first-child { background: var(--papel); }
+.fuente { font-size: .85rem; }
+.relacionadas { margin-top: 2.5rem; }

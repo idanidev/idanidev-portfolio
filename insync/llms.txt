@@ -24,6 +24,14 @@ InSync lo hace Daniel Benito, un desarrollador independiente en España. Está e
 
 Sin anuncios y sin vender datos. No pide la ubicación, y a las fotos que se adjuntan se les quitan las coordenadas antes de subirlas. La app solo cuenta, de forma anónima y agregada, qué partes se usan. La cuenta se borra desde la propia app.
 
+## Guías
+
+- [Cómo compartir los turnos con tu pareja y ver qué días libráis los dos](https://idanidev-portfolio.vercel.app/insync/turnos-en-pareja.html)
+- [Apps para compartir turnos en pareja: comparativa de InSync, Supershift, TimeTree, Calendarity y el calendario de Google o de Apple](https://idanidev-portfolio.vercel.app/insync/apps-turnos-pareja.html)
+- [InSync o TimeTree para parejas que trabajan a turnos](https://idanidev-portfolio.vercel.app/insync/insync-o-timetree.html)
+- [Calendario de turnos para enfermería y TCAE](https://idanidev-portfolio.vercel.app/insync/turnos-enfermeria.html)
+- [Cuadrante de turnos de policía y Guardia Civil](https://idanidev-portfolio.vercel.app/insync/turnos-policia-guardia-civil.html)
+
 ## Enlaces
 
 - [Descarga en la App Store](https://apps.apple.com/app/id6798864347)
